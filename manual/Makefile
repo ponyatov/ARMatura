@@ -1,4 +1,4 @@
-all: dvi
+all: pdf
 
 dvi: book.dvi
 pdf: book.pdf
@@ -6,7 +6,7 @@ pdf: book.pdf
 clean:
 	rm -f *.dvi *.log *.toc *.aux
 
-TEX = book.tex intro.tex PION.tex blink.tex Makefile
+TEX = book.tex intro.tex PION.tex blink.tex CPU_table.tex Makefile
 	
 book.pdf: $(TEX)
 	pdflatex $< && pdflatex $< && pdflatex $<
