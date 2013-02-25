@@ -2,12 +2,25 @@
 %twoside
 
 %\usepackage[T2A,T1]{fontenc}
-%\usepackage[utf8]{inputenc}
+\usepackage[cp1251]{inputenc}
 \usepackage{babel}
 
+\usepackage[left=2.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage[colorlinks=true,
+	pdftitle={ARMatura controllers (ru)},
+	pdfauthor={(c) Dmitry Ponyatov <dponyatov@gmail.com>, SSAU ASCL},
+	pdfkeywords={ARM} {Cortex} {controller} {ARMatura} {Arduino} {SSAU},
+	pdfsubject={ru manual on writing programs for ARM-based controllers developed in SSAU ASCL}
+	]{hyperref}
+\newcommand{\email}[2]{#1\ \href{mailto:#2}{<\nolinkurl{#2}>}}
+%\newcommand{\url}[1]{\emph{#1}}
+%\newcommand{\email}[2]{\emph{#1\ <#2>}}
+
 \newcommand{\cpp}{$C^{+^{+}}$}
-\newcommand{\url}[1]{\emph{#1}}
-\newcommand{\email}[2]{\emph{#1 <#2>}}
+%\newcommand{\tm}{$^{^{TM}}$}
+\newcommand{\arm}{ARM}
+\newcommand{\cortex}[1]{Cortex-#1}
 
 \title{Контроллеры ARMatura}
 \author{\copyright\ Dmitry Ponyatov <dponyatov@gmail.com>, SSAU ASCL}
@@ -21,7 +34,7 @@
 \chapter{STM32VLDISCOVERY /STM32F100RBT6/}
 \chapter{STM32F4DISCOVERY /SRM32F407VGT6/}
 \chapter{ARMатура /STM32F427IIT6/}
-\chapter{PION /STM32F100C4T6B/}
+\chapter{PION /STM32F100C4T6B/} \input{PION}
 \part{Установка ПО}
 
 \chapter{Компиляторы}
@@ -46,6 +59,7 @@
 \part{Основы языка \cpp}
 \part{Первые шаги}
 \chapter{Установка Keil MDK-ARM}
+\chapter{blink} \input{blink}
 \chapter{Hell Of World}
 \part{Отладка}
 \chapter{JTAG}
