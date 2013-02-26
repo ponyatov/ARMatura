@@ -1,0 +1,7 @@
+STM32F10x_StdPeriph_Lib_V3.5.0_stsw-stm32054.zip
+STM32F4DISCOVERY_fabric_firmware.rar
+STM32F4DiscoFW_v110_stsw-stm32068.zip
+STlink_v240_stsw-link004.zip
+files.txt
+stm32f4_dsp_stdperiph_lib.zip
+stmstudio.zip
