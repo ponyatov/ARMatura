@@ -7,6 +7,8 @@
 
 \usepackage[left=2.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 
+\usepackage{graphicx}
+
 \usepackage[colorlinks=true,
 	pdftitle={ARMatura controllers (ru)},
 	pdfauthor={(c) Dmitry Ponyatov <dponyatov@gmail.com>, SSAU ASCL},
@@ -21,6 +23,7 @@
 %\newcommand{\tm}{$^{^{TM}}$}
 \newcommand{\arm}{ARM}
 \newcommand{\cortex}[1]{Cortex-#1}
+\newcommand{\armatura}{\arm atura}
 
 \title{Контроллеры ARMatura}
 \author{\copyright\ Dmitry Ponyatov <dponyatov@gmail.com>, SSAU ASCL}
@@ -30,19 +33,23 @@
 
 \part{Введение} \input{intro}
 
-\part{Железо}
-\chapter{STM32VLDISCOVERY /STM32F100RBT6/}
-\chapter{STM32F4DISCOVERY /SRM32F407VGT6/}
-\chapter{ARMатура /STM32F427IIT6/}
-\chapter{PION /STM32F100C4T6B/} \input{PION}
-\part{Установка ПО}
+\part{Железо}\input{hardware/hardware}
 
+\part{Первые шаги}
+\chapter{Установка Keil MDK-ARM}\label{keil}
+\input{keil/keil}
+\input{keil/install}
+\chapter{blink}\input{blink}
+\chapter{Hell Of World}
+
+\part{Средства разработки}
+\chapter{Keil MDK-ARM}\input{keil/keil}
 \chapter{Компиляторы}
-\section{GCC}
+\section{GCC}\label{gcc}
 \section{KeilCC}
 \section{IAR}
 \chapter{IDE}
-\section{Eclipse}
+\section{Eclipse}\label{eclipse}
 \section{Code::Blocks}
 \section{gVim}
 \section{Keil uVision}
@@ -56,11 +63,12 @@
 \section{GDB}
 \subsection{STlink gdbserver}
 \subsection{OpenOCD}
+
 \part{Основы языка \cpp}
-\part{Первые шаги}
-\chapter{Установка Keil MDK-ARM}
-\chapter{blink} \input{blink}
-\chapter{Hell Of World}
+\chapter{Синтаксис}
+\chapter{Типы данных}
+\chapter{Стандартная библиотека libc}
+
 \part{Отладка}
 \chapter{JTAG}
 \chapter{GDB}
@@ -69,17 +77,26 @@
 \chapter{Startup}
 \chapter{Стандартная библиотека STM32}
 \chapter{USB client/host}
-\part{Встроенные фичи кристалла}
+
+\part{Ядро \cortex{Mx}}
 \chapter{Режимы ARM и Thumb}
 \chapter{DMA}
-\chapter{DSP}
-\chapter{FPU}
+\chapter{DSP /\cortex{M3}/}
+\chapter{FPU /\cortex{M4F}/}
+
 \part{Интерфейсы}
 \chapter{USB}
 \chapter{UART}
 \chapter{SPI}
 \chapter{I2C}
 \chapter{CAN}
+
+\part{Операционные системы ОСРВ}
+\chapter{Keil RTX}
+\chapter{FreeRTOS}
+\chapter{eCos}
+\chapter{Linux} подробно рассмотрен в отдельном разделе \ref{linux}
+
 \part{Стек TCP/IP}
 \chapter{Ethernet}
 \chapter{PPP}
@@ -92,6 +109,7 @@
 \chapter{шина Dallas 1Wire}
 \section{RTC}
 \section{Датчики температуры DS18x20}
+\part{Встраиваемый Linux}\label{linux}
 \part{Приложения}
 \chapter{Сводная таблица процессоров}\input{CPU_table}
 \end{document}
