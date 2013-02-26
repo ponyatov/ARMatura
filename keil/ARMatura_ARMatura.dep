@@ -1,5 +1,5 @@
 Dependencies for Project 'ARMatura', Target 'ARMatura': (DO NOT MODIFY !)
-F (..\lib\STM32F4\startup_stm32f4xx.s)(0x4F549408)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F4xx --list "..\bin\startup_stm32f4xx.lst" --xref -o "..\bin\startup_stm32f4xx.o" --depend "..\bin\startup_stm32f4xx.d")
+F (..\lib\STM32F4\startup_stm32f4xx.s)(0x00000000)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F4xx --list "..\bin\startup_stm32f4xx.lst" --xref -o "..\bin\startup_stm32f4xx.o" --depend "..\bin\startup_stm32f4xx.d")
 F (..\lib\STM32F4\system_stm32f4xx.c)(0x4F54918C)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F4xx -o "..\bin\system_stm32f4xx.o" --omf_browse "..\bin\system_stm32f4xx.crf" --depend "..\bin\system_stm32f4xx.d")
 I (..\lib\STM32F4\stm32f4xx.h)(0x4F5497FC)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm4.h)(0x508793BE)
