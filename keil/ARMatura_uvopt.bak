@@ -213,7 +213,7 @@
       <Focus>0</Focus>
       <ColumnNumber>26</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>109</TopLine>
+      <TopLine>5</TopLine>
       <CurrentLine>6</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\lib\STM32F4\system_stm32f4xx.c</PathWithFileName>

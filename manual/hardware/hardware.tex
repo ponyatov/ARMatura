@@ -1,24 +1,48 @@
-\chapter{STM32VLDISCOVERY /STM32F100RBT6/}
-\chapter{STM32F4DISCOVERY /SRM32F407VGT6/}
+\chapter{STM32VLDISCOVERY /STM32F100RBT6/} \label{STM32VLDISCOVERY}
 
-\includegraphics[height=120mm]{hardware/stm32f4_discovery.jpg}
-\url{}
+\includegraphics[height=120mm]{hardware/stm32vl_discovery.jpg}
 
 \begin{itemize}
-\item микроконтроллер STM32F407VGT6 на базе 32-битного ядра \cortex{M4F}, 1 MB Flash, 192 KB RAM в корпусе LQFP100 
-\item встроенный ST-LINK/V2 (только SWD) с возможностью использования в режиме внешнего программатора
-(с подключением по SWD для программирования и отладки)
-\item Board power supply: through USB bus or from an external 5 V supply voltage
-\item External application power supply: 3 V and 5 V
-\item LIS302DL, ST MEMS motion sensor, 3-axis digital output accelerometer
-\item MP45DT02, ST MEMS audio sensor, omni-directional digital microphone
-\item CS43L22, audio DAC with integrated class D speaker driver
-\item Eight LEDs:LD1 (red/green) for USB communicationLD2 (red) for 3.3 V power onFour user LEDs, LD3 (orange), LD4 (green), LD5 (red) and LD6 (blue)2 USB OTG LEDs LD7 (green) VBus and LD8 (red) over-current
-\item Two push buttons (user and reset)
-\item USB OTG FS with micro-AB connector
-\item Extension header for all LQFP100 I/Os for quick connection to prototyping board and easy probing
+\item Микрокнтроллер STM32F100RB \ref{STM32F100RBT}, 128 KB Flash, 8 KB RAM in 64-pin LQFP
+\item Встроенный ST-Link с возможностью использования в режиме внешнего программатора (только с SWD коннектором)
+\item Разработана для питания как от USB, так и от внешнего источника 3.3 или 5 вольт
+\item Может обеспечить питание 3 и 5 вольт для внешних устройств
+\item Два пользовательских светодиода (зеленый и синий)
+\item Пользовательская кнопка USER
+\item Кнопка сброса RESET
+\item Контактные гребенки для всех выводов QFP64 для быстрого подключения и монтажа прототипа
 \end{itemize}
 
+\bigskip
 
-\chapter{\armatura\ /STM32F417IGT/}
-\chapter{PION /STM32F100C4T6B/} \input{PION}
+Цена в розницу: 750 р. 
+
+\url{http://www.voltmaster.ru/cgi-bin/qwery.pl?id=127000573571&group=7000046}
+
+\chapter{STM32F4DISCOVERY /SRM32F407VGT6/} \label{STM32F4DISCOVERY}
+
+\includegraphics[height=120mm]{hardware/stm32f4_discovery.jpg}
+
+\begin{itemize}
+\item микроконтроллер STM32F407VGT6 \ref{STM32F407VGT} на базе 32-битного ядра \cortex{M4F}, 1 MB Flash, 192 KB RAM в корпусе LQFP100 
+\item встроенный ST-LINK/V2 с возможностью использования в режиме внешнего программатора (только с SWD коннектором)
+\item Разработана для питания как от USB, так и от внешнего источника 5 вольт
+\item Может обеспечить питание 3 и 5 вольт для внешних устройств
+\item LIS302DL, ST MEMS датчик движения, 3-осевой цифровой гироскоп
+\item MP45DT02, ST MEMS аудиодатчик, всенаправленный цифровой микрофон
+\item CS43L22, аудиоЦАП со встроенным аудиоусилителем класса D
+\item Восемь LEDs:LD1 (red/green) for USB communicationLD2 (red) for 3.3 V power onFour user LEDs, LD3 (orange), LD4 (green), LD5 (red) and LD6 (blue)2 USB OTG LEDs LD7 (green) VBus and LD8 (red) over-current
+\item Пользовательская кнопка USER
+\item Кнопка сброса RESET
+\item USB OTG FS with micro-AB connector
+\item Контактные гребенки для всех выводов LQFP100 ля быстрого подключения и монтажа прототипа
+\end{itemize}
+
+\bigskip
+
+Цена в розницу: 1140 р. 
+
+\url{http://www.voltmaster.ru/cgi-bin/qwery.pl?id=127000854271&group=7000046}
+
+\chapter{\armatura\ /STM32F417IGT/} \label{armatura}
+\chapter{PION /STM32F100C4T6B/} \label{pion} \input{PION}

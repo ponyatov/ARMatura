@@ -8,6 +8,7 @@
 \usepackage[left=2.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 
 \usepackage{graphicx}
+\usepackage[os=win]{menukeys}
 
 \usepackage[colorlinks=true,
 	pdftitle={ARMatura controllers (ru)},
@@ -36,10 +37,11 @@
 \part{Железо}\input{hardware/hardware}
 
 \part{Первые шаги}
+\chapter{Установка пакета ПО для адаптера STlink}
 \chapter{Установка Keil MDK-ARM}\label{keil}
 \input{keil/keil}
 \input{keil/install}
-\chapter{blink}\input{blink}
+\input{blink}
 \chapter{Hell Of World}
 
 \part{Средства разработки}

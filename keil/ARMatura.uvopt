@@ -79,34 +79,29 @@
       <Books>
         <Book>
           <Number>0</Number>
-          <Title>Datasheet</Title>
-          <Path>DATASHTS\ST\STM32F4xx\DM00037051.pdf</Path>
+          <Title>Reference Manual</Title>
+          <Path>DATASHTS\ST\STM32F10xxx.PDF</Path>
         </Book>
         <Book>
           <Number>1</Number>
-          <Title>Reference Manual</Title>
-          <Path>DATASHTS\ST\STM32F4xx\DM00031020.pdf</Path>
+          <Title>Technical Reference Manual</Title>
+          <Path>datashts\arm\cortex_m3\r1p1\DDI0337E_CORTEX_M3_R1P1_TRM.PDF</Path>
         </Book>
         <Book>
           <Number>2</Number>
-          <Title>Technical Reference Manual</Title>
-          <Path>datashts\arm\cortex_m4\r0p1\DDI0439C_CORTEX_M4_R0P1_TRM.PDF</Path>
-        </Book>
-        <Book>
-          <Number>3</Number>
           <Title>Generic User Guide</Title>
-          <Path>datashts\arm\cortex_m4\r0p1\DUI0553A_CORTEX_M4_DGUG.PDF</Path>
+          <Path>datashts\arm\cortex_m3\r2p1\DUI0552A_CORTEX_M3_DGUG.PDF</Path>
         </Book>
       </Books>
       <DllOpt>
         <SimDllName>SARMCM3.DLL</SimDllName>
-        <SimDllArguments>-MPU -REMAP</SimDllArguments>
+        <SimDllArguments>-REMAP</SimDllArguments>
         <SimDlgDllName>DCM.DLL</SimDlgDllName>
-        <SimDlgDllArguments>-pCM4</SimDlgDllArguments>
+        <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
         <TargetDllName>SARMCM3.DLL</TargetDllName>
-        <TargetDllArguments>-MPU</TargetDllArguments>
+        <TargetDllArguments></TargetDllArguments>
         <TargetDlgDllName>TCM.DLL</TargetDlgDllName>
-        <TargetDlgDllArguments>-pCM4</TargetDlgDllArguments>
+        <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
       </DllOpt>
       <DebugOpt>
         <uSim>0</uSim>
@@ -144,8 +139,13 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>ST-LINKIII-KEIL_SWO</Key>
+          <Name>-U -O78 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -TO18 -TC10000000 -TP21 -TDS8004 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL020000</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>UL2CM3</Key>
-          <Name>-O207 -S0 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F4xx_1024 -FS08000000 -FL0100000)</Name>
+          <Name>-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL020000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
@@ -233,7 +233,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>3</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>

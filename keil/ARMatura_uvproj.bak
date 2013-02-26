@@ -350,7 +350,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\lib\STM32F4</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -366,7 +366,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\lib\STM32F4</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
@@ -395,6 +395,21 @@
               <FileName>startup_stm32f4xx.s</FileName>
               <FileType>2</FileType>
               <FilePath>..\lib\STM32F4\startup_stm32f4xx.s</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lib\STM32F4\system_stm32f4xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>blink</GroupName>
+          <Files>
+            <File>
+              <FileName>blink.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\blink\blink.c</FilePath>
             </File>
           </Files>
         </Group>

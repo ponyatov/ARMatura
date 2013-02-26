@@ -1,0 +1,18 @@
+ARMatura: hardware/software embedded platform and large book (in russian)
+designed for SSAU ASCL Aerospace Construction Institute
+
+by (c) Dmitry Ponyatov <dponyatov@gmail.com>, OpenHardware & LGPL lic.
+
+Based on faster Cortex-M microcontroller architecture in place of
+Atmel AVR8 and Arduino usage in laboratory and space experiments.
+
+Widely available for public usage in terms of OpenHardware and LGPL licence
+with some limits in area of SSAU ASCL internal applications.
+
+It's yet another replacement of Arduino platform
+equipped with large manual (ru).
+
+The goal is providing good basis for students and science personal
+not adopted to real embedded developent.
+ 
+ 
