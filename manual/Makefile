@@ -9,6 +9,7 @@ clean:
 TEX = book.tex intro.tex PION.tex blink.tex CPU_table.tex \
 	keil/keil.tex keil/install.tex keil/*.jpg keil/cfg/keilconfig.tex keil/cfg/*.jpg \
 	hardware/*.jpg hardware/*.tex \
+	stlink/*.tex stlink/*.jpg \
 	Makefile
 	
 book.pdf: $(TEX)

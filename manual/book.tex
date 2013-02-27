@@ -1,5 +1,4 @@
-\documentclass[oneside,english,russian,12pt]{book}
-%twoside
+\documentclass[oneside,a4paper,12pt,english,russian]{memoir}
 
 %\usepackage[T2A,T1]{fontenc}
 \usepackage[cp1251]{inputenc}
@@ -26,18 +25,21 @@
 \newcommand{\cortex}[1]{Cortex-#1}
 \newcommand{\armatura}{\arm atura}
 
+\begin{document}
 \title{Контроллеры ARMatura}
 \author{\copyright\ Dmitry Ponyatov <dponyatov@gmail.com>, SSAU ASCL}
-\begin{document}
 \maketitle
 \tableofcontents
 
-\part{Введение} \input{intro}
+\part{Введение}
+%\begin{abstract} 
+\input{intro}
+%\end{abstract}
 
 \part{Железо}\input{hardware/hardware}
 
 \part{Первые шаги}
-\chapter{Установка пакета ПО для адаптера STlink}
+\chapter{Установка пакета ПО STlink}\input{stlink/install}
 \chapter{Установка Keil MDK-ARM}\label{keil}
 \input{keil/keil}
 \input{keil/install}
