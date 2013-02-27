@@ -131,3 +131,20 @@ Floating Point Hardware: & Not Used & для \cortex{M4} доступен аппаратный FPU \\
 \bigskip
 
 \section{Структура файлов}
+
+\dirtree{%
+.1 ARMatura.
+.2 startup \DTcomment{код инициализации ядра процессора}.
+.3 keil\_startup\_stm32f4xx.s \DTcomment{ассемблерный код инициализации}.
+.3 system\_stm32f4xx.c \DTcomment{сишный код инициализации STM32F4}.
+.4 system\_stm32f4xx.h \DTcomment{сишный код инициализации STM32F4}.
+.4 stm32f4xx.h \DTcomment{STM32F4 CMSIS Cortex-M4 Device Peripheral}.
+.5 core\_cm4.h \DTcomment{CMSIS библиотека поддержки ядра \cortex{M4}}.
+.5 stdint.h \DTcomment{стандартные целые типы \cpp}.
+.5 core\_cmInstr.h \DTcomment{CMSIS Core Instruction Interface}.
+.5 core\_cmFunc.h \DTcomment{CMSIS Core Register Access Functions}.
+.5 core\_cm4\_simd.h \DTcomment{CMSIS \cortex{M4} расширение SIMD/DSP}.
+.2 blink.
+.3 blink.c \DTcomment{простая программа мигания светодиодом или дрыгания ногой}.
+.4 stm32f4xx.h.
+}
