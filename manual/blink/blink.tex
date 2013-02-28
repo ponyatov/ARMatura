@@ -148,3 +148,39 @@ Floating Point Hardware: & Not Used & для \cortex{M4} доступен аппаратный FPU \\
 .3 blink.c \DTcomment{простая программа мигания светодиодом или дрыгания ногой}.
 .4 stm32f4xx.h.
 }
+
+\bigskip
+
+В отличие от кристаллов типа Atmel AVR, при программировании для архитектуры \cortex{Mx}
+принято использовать готовую библиотеку \cmsis, 
+для которой проводится активная стандартизация среди производителей процессоров.
+
+\bigskip
+\menu{Cortex>Microcontroller>Software>Interface>Standard}
+\bigskip 
+
+\bigskip
+\url{http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php}
+\bigskip
+
+Кроме основной части \cmsis, общей для всех производителей МК \cortex{Mx}, каждый подставщик
+предоставляет аппаратно-зависимую часть библиотеки:
+\begin{itemize}
+  \item стартовый код инициализации ядра процессора
+  \item библиотеку периферии например STM32F Standard Peripherial Library, включающую код
+  обеспечивающий доступ к устройствам, встроенным в кристалл в т.ч.
+  \item USB OTG Host \& Device 
+  \item DSP/SIMD Extension (для \cortex{M4F}) системо-зависимую часть расширения \cmsis\ DSP
+\end{itemize}
+
+\bigskip
+Библиотеки доступны для загрузки тут:
+
+\bigskip
+\paragraph{STSW-STM32065}
+
+STM32F4 DSP and standard peripherals library, including 82 examples for 26 different peripherals and template project for 5 different IDEs
+
+\url{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stm32f4_dsp_stdperiph_lib.zip}
+\bigskip
+
