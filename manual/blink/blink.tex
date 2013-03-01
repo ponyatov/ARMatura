@@ -184,3 +184,30 @@ STM32F4 DSP and standard peripherals library, including 82 examples for 26 diffe
 \url{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stm32f4_dsp_stdperiph_lib.zip}
 \bigskip
 
+\section{blink.c}
+
+Сначала поcмотрим код основной программы:
+
+\lstinputlisting[
+	label=blink.c,
+	caption={[blink.c]/src/blink/blink.c},
+	emph={stm32f4xx}
+]{../src/blink/blink.c}
+
+Как видим --- в ней нет абсолютно ничего сложного: только подключение библиотеки
+нашего МК и единственная функция \lstinline+int main(void)+, содержащая только 
+возврат в стартовый код \cmsis\ значения по умолчанию --- 0.
+
+\bigskip
+
+Файл \verb+stm32f4xx.h+ подробно рассмотрен в \ref{stm32f4xx.h}\ --- на текущем
+слое знаний не стоит в него углубляться: он слишком большой и содержит практически
+весь список функционала, обеспечиваемый \cmsis.
+
+То же самое можно сказать и о других файлах --- все они относятся либо к библиотеке
+\cmsis, либо к файлам поддержки производителя чипов.
+
+Подробности будут рассмотрены далее в разделе \ref{cmsis}, а пока важнее получить
+практический результат.
+  
+

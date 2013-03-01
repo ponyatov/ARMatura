@@ -6,12 +6,33 @@
 
 \usepackage[left=2.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{graphicx}
 \usepackage[os=win]{menukeys}
 \usepackage{algorithm,algpseudocode}
 \usepackage{xyling}
 \usepackage{dirtree}
 \usepackage{amsmath}
+\usepackage{lscape}
+
+\usepackage{listings}
+\lstloadlanguages{{[ISO]C++},{[gnu]make},Python,bash}
+\lstset{
+	language={[ISO]C++},
+	basicstyle=\small\ttfamily,
+	keywordstyle=\color{Blue},
+	commentstyle=\color{OliveGreen},
+	identifierstyle=\color{RubineRed},
+%	stringstyle=\color{MidnightBlue},
+	numberstyle=\color{MidnightBlue},
+	showstringspaces=true,
+%	showtabs=true,
+	extendedchars=true,
+	frame=trBL,frameround=tttt,
+	tabsize=4,
+	emphstyle=\underbar%,
+%	morestring=[s]{<}{>}
+	}
 
 \usepackage[colorlinks=true,
 	pdftitle={ARMatura controllers (ru)},
@@ -35,6 +56,7 @@
 \author{\copyright\ Dmitry Ponyatov <dponyatov@gmail.com>, SSAU ASCL}
 \maketitle
 \tableofcontents
+\lstlistoflistings
 
 \part{¬ведение}
 %\begin{abstract} 
@@ -82,10 +104,14 @@
 \chapter{JTAG}
 \chapter{GDB}
 \chapter{OpenOCD}
-\part{CMSIS}
-\chapter{Startup}
+
+\begin{landscape}
+\part{CMSIS}\label{cmsis}
+\input{CMSIS/startup}
 \chapter{—тандартна€ библиотека STM32}
+\input{CMSIS/STM32/stm32f4xx}
 \chapter{USB client/host}
+\end{landscape}
 
 \part{ядро \cortex{Mx}}
 \chapter{–ежимы ARM и Thumb}
