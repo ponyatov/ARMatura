@@ -1,0 +1,126 @@
+\chapter{Сводная таблица процессоров}
+
+\label{STM32F100C4T6B}
+\label{STM32F100RBT}
+\label{STM32F103C8T}
+\label{STM32F103CBT}
+\label{STM32F103RBT}
+\label{STM32F407VGT}
+\label{STM32F407IGT}
+\label{STM32F417IGT}
+
+\menu{STM32F>core>crypto>model>pins>flash>package>n}
+\bigskip
+
+\menu{core}
+
+\begin{tabular}{l l l}
+1 & \cortex{M3} \\
+3 & \cortex{M4} \\
+4 & \cortex{M4F} & с расширениями FPU (плавающая точка) и SIMD\\ 
+&&для приложений цифровой обработки сигналов \\
+\end{tabular}
+
+\menu{crypto}
+
+\begin{tabular}{l r l}
+0 & \cortex{M3}& только CRC \\
+1 & &Crypto расширение с функционалом вычислений MD5, SHA,.. \\
+2 & \cortex{M4}& CRC \\
+3 & &Crypto\\
+\end{tabular}
+
+\menu{model}
+
+\begin{tabular}{l l}
+0 & \\
+3 & включена поддержка CAN, USB, SDIO \\
+7 & \\
+\end{tabular}
+
+\menu{package}
+
+\begin{tabular}{l l}
+T & LQFP \\
+\end{tabular}
+
+\menu{pins}
+
+\begin{tabular}{l r}
+C & 48 \\
+R & 64 \\
+V & 100 \\
+I & 176 \\
+\end{tabular}
+
+\menu{flash}
+
+\begin{tabular}{l r}
+8 & 64K \\
+B & 128K \\
+G & 1M \\
+I & 2M \\
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{l l r r r r l l}
+               & ядро      &     &       &      & корпус &      & ST    \\
+               & \cortex{} & MHz & Flash & SRAM & LQFP   & GPIO & family\\
+\hline
+\hline
+STM32F100C4T6B & M3        &  24 &  16K  &   4K &  48    &      & LD    \\
+STM32F100RBT   & M3        &  24 & 128K  &   8K & 100    &      & MD    \\
+\hline
+STM32F103C8T   & M3        &  72 &  64K  &  20K &  48    & 37   & MD    \\
+STM32F103CBT   & M3        &  72 & 128K  &  20K &  48    & 37   & MD    \\
+STM32F103RBT   & M3        &  72 & 128K  &  20K &  64    & 51   & MD    \\
+STM32F103VBT   & M3        &  72 & 128K  &  20K & 100    & 80   & MD    \\
+\hline
+STM32F407VGT   & M4F       & 168 &   1M  & 192K & 144    &      &       \\
+STM32F407IGT   & M4F       & 168 &   1M  & 192K & 176    &      &       \\
+\hline
+STM32F427IIT   & M4F       & 168 &   2M  & 256K & 176    &      &       \\
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{l l l l l l l l}
+               & CAN       & USB       & UART & I2C & SPI & ADC          & DAC \\
+\hline
+\hline
+STM32F100C4T6B & $\circ$   & $\circ$   & 2    &     & 1   &              &     \\
+STM32F100RBT   & $\circ$   & $\circ$   & 1    &     &     &              &     \\
+\hline
+STM32F103C8T   & $\bullet$ & $\bullet$ & 3    & 2   & 2   & 2x12b (10ch) &     \\
+STM32F103C8T   & $\bullet$ & $\bullet$ & 3    & 2   & 2   & 2x12b (10ch) &     \\
+STM32F103RBT   & $\bullet$ & $\bullet$ & 3    & 2   & 2   & 2x12b (16ch) &     \\
+STM32F103VBT   & $\bullet$ & $\bullet$ & 3    & 2   & 2   & 2x12b (16ch) &     \\
+\hline
+STM32F407VGT   &         2 & 2         & 6    &     &     &              &     \\
+STM32F407IGT   &         2 & 2         & 6    &     &     &              &     \\
+\hline
+STM32F427IIT   &         2 & 2         & 8    &     &     &              &     \\
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{l l l l l l l}
+               & таймеры   & PWM    & DMA & WDT & SysTick   & RTC       \\
+               & IC/OC/PWM & таймер &     &     & 24b       &           \\
+\hline
+\hline
+STM32F100C4T6B &           &        &     &     &           &           \\
+STM32F100RBT   &           &        &     &     &           &           \\
+\hline
+STM32F103C8T   & 3x16b     & 1x16b  & 7ch & 2   & $\bullet$ & $\bullet$ \\
+STM32F103C8T   & 3x16b     & 1x16b  & 7ch & 2   & $\bullet$ & $\bullet$ \\
+STM32F103RBT   & 3x16b     & 1x16b  & 7ch & 2   & $\bullet$ & $\bullet$ \\
+STM32F103VBT   & 3x16b     & 1x16b  & 7ch & 2   & $\bullet$ & $\bullet$ \\
+\hline
+STM32F407VGT   &           &        &     &     & $\bullet$ & $\bullet$ \\
+STM32F407IGT   &           &        &     &     & $\bullet$ & $\bullet$ \\
+\hline
+STM32F427IIT   &           &        &     &     & $\bullet$ & $\bullet$ \\
+\end{tabular}
+

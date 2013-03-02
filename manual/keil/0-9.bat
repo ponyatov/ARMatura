@@ -1,9 +1,0 @@
-rename 1.jpg 01.jpg
-rename 2.jpg 02.jpg
-rename 3.jpg 03.jpg
-rename 4.jpg 04.jpg
-rename 5.jpg 05.jpg
-rename 6.jpg 06.jpg
-rename 7.jpg 07.jpg
-rename 8.jpg 08.jpg
-rename 9.jpg 09.jpg

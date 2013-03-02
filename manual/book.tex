@@ -14,6 +14,7 @@
 \usepackage{dirtree}
 \usepackage{amsmath}
 \usepackage{lscape}
+\usepackage{wasysym}
 
 \usepackage{listings}
 \lstloadlanguages{{[ISO]C++},{[gnu]make},Python,bash}
@@ -45,11 +46,12 @@
 %\newcommand{\email}[2]{\emph{#1\ <#2>}}
 
 \newcommand{\cpp}{$C^{+^{+}}$}
-%\newcommand{\tm}{$^{^{TM}}$}
 \newcommand{\arm}{ARM}
 \newcommand{\cortex}[1]{Cortex-#1}
 \newcommand{\armatura}{\arm atura}
-\newcommand{\cmsis}{CMSIS}
+\newcommand{\cmsis}{CMSIS\ref{cmsis}}
+\newcommand{\bus}{ARMAbus}
+\newcommand{\eclipse}{Eclipse\ref{eclipse}}
 
 \begin{document}
 \title{Контроллеры ARMatura}
@@ -68,50 +70,45 @@
 \part{Первые шаги}
 \chapter{Установка пакета ПО STlink}\input{stlink/install}
 \chapter{Установка Keil MDK-ARM}\label{keil}
-\input{keil/keil}
-\input{keil/install}
+\input{IDE/Keil/keil}
+\input{IDE/Keil/install/install}
 \input{blink/blink}
 \chapter{Hell Of World}
 
 \part{Средства разработки}
-\chapter{Keil MDK-ARM}\input{keil/keil}
+\chapter{Keil MDK-ARM}\input{IDE/Keil/keil}
+
 \chapter{Компиляторы}
 \section{GCC}\label{gcc}
 \section{KeilCC}
 \section{IAR}
+
 \chapter{IDE}
-\section{Eclipse}\label{eclipse}
+\input{IDE/Eclipse/eclipse}
 \section{Code::Blocks}
 \section{gVim}
 \section{Keil uVision}
 \section{IAR}
+
 \chapter{Программаторы}
 \section{STlink}
 \section{Serial Boot}
-\chapter{Отладчики}
-\section{JTAG}
+
+\chapter{Отладка}
 \section{STM32 SWD}
 \section{GDB}
 \subsection{STlink gdbserver}
 \subsection{OpenOCD}
+\section{JTAG}
 
 \part{Основы языка \cpp}
 \chapter{Синтаксис}
 \chapter{Типы данных}
 \chapter{Стандартная библиотека libc}
 
-\part{Отладка}
-\chapter{JTAG}
-\chapter{GDB}
-\chapter{OpenOCD}
-
-\begin{landscape}
-\part{CMSIS}\label{cmsis}
-\input{CMSIS/startup}
-\chapter{Стандартная библиотека STM32}
-\input{CMSIS/STM32/stm32f4xx}
-\chapter{USB client/host}
-\end{landscape}
+%\begin{landscape}
+\input{CMSIS/cmsis}
+%\end{landscape}
 
 \part{Ядро \cortex{Mx}}
 \chapter{Режимы ARM и Thumb}
@@ -146,6 +143,6 @@
 \part{Встраиваемый Linux}\label{linux}
 \input{QA/QA}
 \part{Приложения}
-\chapter{Сводная таблица процессоров}\input{CPU_table}
+\input{hardware/CPU_table}
 \end{document}
 
