@@ -46,5 +46,10 @@
 			<type>1</type>
 			<location>C:/LaTeX/MiKTeX/tex/latex/tools/.tex</location>
 		</link>
+		<link>
+			<name>manual/CMSIS/.tex</name>
+			<type>1</type>
+			<location>C:/LaTeX/tex/latex/tools/.tex</location>
+		</link>
 	</linkedResources>
 </projectDescription>

@@ -3,6 +3,7 @@
 %\usepackage[T2A,T1]{fontenc}
 \usepackage[cp1251]{inputenc}
 \usepackage{babel}
+\usepackage{indentfirst}
 
 \usepackage[left=2.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 
@@ -19,6 +20,7 @@
 \usepackage{listings}
 \lstloadlanguages{{[ISO]C++},{[gnu]make},Python,bash}
 \lstset{
+	inputencoding=cp1251, extendedchars=true,
 	language={[ISO]C++},
 	basicstyle=\small\ttfamily,
 	keywordstyle=\color{Blue},
@@ -28,7 +30,6 @@
 	numberstyle=\color{MidnightBlue},
 	showstringspaces=true,
 %	showtabs=true,
-	extendedchars=true,
 	frame=trBL,frameround=tttt,
 	tabsize=4,
 	emphstyle=\underbar%,
@@ -52,6 +53,11 @@
 \newcommand{\cmsis}{CMSIS\ref{cmsis}}
 \newcommand{\bus}{ARMAbus}
 \newcommand{\eclipse}{Eclipse\ref{eclipse}}
+\newcommand{\gdb}{GDB\ref{gdb}}
+\newcommand{\keil}{Keil\ref{keil}}
+
+\newcommand{\stmdisco}{STM32F4DISCOVERY\ref{STM32F4DISCOVERY}}
+\newcommand{\stlink}{STlink\ref{stlink}}
 
 \begin{document}
 \title{Контроллеры ARMatura}
@@ -67,39 +73,20 @@
 
 \part{Железо}\input{hardware/hardware}
 
-\part{Первые шаги}
-\chapter{Установка пакета ПО STlink}\input{stlink/install}
-\chapter{Установка Keil MDK-ARM}\label{keil}
-\input{IDE/Keil/keil}
-\input{IDE/Keil/install/install}
-\input{blink/blink}
-\chapter{Hell Of World}
+\input{firststep/firststep}
 
 \part{Средства разработки}
-\chapter{Keil MDK-ARM}\input{IDE/Keil/keil}
+
+\input{IDE/ide}
 
 \chapter{Компиляторы}
 \section{GCC}\label{gcc}
 \section{KeilCC}
 \section{IAR}
 
-\chapter{IDE}
-\input{IDE/Eclipse/eclipse}
-\section{Code::Blocks}
-\section{gVim}
-\section{Keil uVision}
-\section{IAR}
+\input{adapter/adapters}
 
-\chapter{Программаторы}
-\section{STlink}
-\section{Serial Boot}
-
-\chapter{Отладка}
-\section{STM32 SWD}
-\section{GDB}
-\subsection{STlink gdbserver}
-\subsection{OpenOCD}
-\section{JTAG}
+\input{debug/debug}
 
 \part{Основы языка \cpp}
 \chapter{Синтаксис}

@@ -1,3 +1,4 @@
-STSW-STM32065
-stm32f4_dsp_stdperiph_lib.zip
+STSW-STM32065: stm32f4_dsp_stdperiph_lib.zip
+STSW-STM23078: stsw-stm32078_stm32vld.zip
+
 
