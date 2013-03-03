@@ -8,5 +8,4 @@
 int main()
 {
 	return 0;
-// проверка отображения строк в LaTeX:	char X[]="Hello World !";
 }
