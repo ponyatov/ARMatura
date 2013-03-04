@@ -1,0 +1,182 @@
+\part{Семейство STM32F10x}
+
+Черновой перевод руководства по программированию
+
+\copyright\ ST PM0056 STM32F10x/20x/21x/L1x Programming manual
+
+\url{http://www.st.com/web/en/resource/technical/document/programming_manual/CD00228163.pdf}
+
+\bigskip
+
+\chapter{Об этом документе}
+\section{Typographical conventions}
+\section{List of abbreviations for registers}
+\section{About the STM32 \cortex{M3}\ processor and core peripherals}
+\subsection{System level interface}
+\subsection{Integrated configurable debug}
+\subsection{\cortex{M3}\ processor features and benefits summary}
+\subsection{\cortex{M3}\ core peripherals}
+
+\chapter{Процессор \cortex{M3}}
+
+\section{Programmers model}
+\subsection{Processor mode and privilege levels for software execution}
+\subsection{Stacks}
+\subsection{Core registers}
+\subsection{Exceptions and interrupts}
+\subsection{Data types}
+\subsection{The Cortex microcontroller software interface standard (CMSIS)}
+
+\section{Memory model}
+\subsection{Memory regions, types and attributes}
+\subsection{Memory system ordering of memory accesses}
+\subsection{Behavior of memory accesses}
+\subsection{Software ordering of memory accesses}
+\subsection{Bit-banding}
+\subsection{Memory endianness}
+\subsection{Synchronization primitives}
+\subsection{Programming hints for the synchronization primitives}
+
+\section{Exception model}
+\subsection{Exception states}
+\subsection{Exception types}
+\subsection{Exception handlers}
+\subsection{Vector table}
+\subsection{Exception priorities}
+\subsection{Interrupt priority grouping}
+\subsection{Exception entry and return}
+
+\section{Fault handling}
+\subsection{Fault types}
+\subsection{Fault escalation and hard faults}
+\subsection{Fault status registers and fault address registers}
+\subsection{Lockup}
+
+\section{Power management}
+\subsection{Entering sleep mode}
+\subsection{Wakeup from sleep mode}
+\subsection{The external event input}
+\subsection{Power management programming hints}
+
+\chapter{Набор инструкций \cortex{M3}}
+\section{Instruction set summary}
+\section{Intrinsic functions}
+
+\section{About the instruction descriptions}
+\subsection{Operands}
+\subsection{Restrictions when using PC or SP}
+\subsection{Flexible second operand}
+\subsection{Shift operations}
+\subsection{Address alignment}
+\subsection{PC-relative expressions}
+\subsection{Conditional execution}
+\subsection{Instruction width selection}
+
+\section{Memory access instructions}
+\subsection{ADR}
+\subsection{LDR and STR, immediate offset}
+\subsection{LDR and STR, register offset}
+\subsection{LDR and STR, unprivileged}
+\subsection{LDR, PC-relative}
+\subsection{LDM and STM}
+\subsection{PUSH and POP}
+\subsection{LDREX and STREX}
+\subsection{CLREX}
+
+\section{General data processing instructions}
+\subsection{ADD, ADC, SUB, SBC, and RSB}
+\subsection{AND, ORR, EOR, BIC, and ORN}
+\subsection{ASR, LSL, LSR, ROR, and RRX}
+\subsection{CLZ}
+\subsection{CMP and CMN}
+\subsection{MOV and MVN}
+\subsection{MOVT}
+\subsection{REV, REV16, REVSH, and RBIT}
+\subsection{TST and TEQ}
+
+\section{Multiply and divide instructions}
+\subsection{MUL, MLA, and MLS}
+\subsection{UMULL, UMLAL, SMULL, and SMLAL}
+\subsection{SDIV and UDIV}
+
+\section{Saturating instructions}
+\subsection{SSAT and USAT}
+
+\section{Bitfield instructions}
+\subsection{BFC and BFI}
+\subsection{SBFX and UBFX}
+\subsection{SXT and UXT}
+\subsection{Branch and control instructions}
+\subsection{B, BL, BX, and BLX}
+\subsection{CBZ and CBNZ}
+\subsection{IT}
+\subsection{TBB and TBH}
+
+\section{Miscellaneous instructions}
+\subsection{BKPT}
+\subsection{CPS}
+\subsection{DMB}
+\subsection{DSB}
+\subsection{ISB}
+\subsection{MRS}
+\subsection{MSR}
+\subsection{NOP}
+\subsection{SEV}
+\subsection{SVC}
+\subsection{WFE}
+\subsection{WFI}
+
+\chapter{Периферия ядра}
+\section{About the STM32 core peripherals}
+
+\section{Memory protection unit (MPU)}
+\subsection{MPU access permission attributes}
+\subsection{MPU mismatch}
+\subsection{Updating an MPU region}
+\subsection{MPU design hints and tips}
+\subsection{MPU type register (MPU\_TYPER)}
+\subsection{MPU control register (MPU\_CR)}
+\subsection{MPU region number register (MPU\_RNR)}
+\subsection{MPU region base address register (MPU\_RBAR)}
+\subsection{MPU region attribute and size register (MPU\_RASR)}
+
+\section{Nested vectored interrupt controller (NVIC)}
+\subsection{The CMSIS mapping of the \cortex{M3}\ NVIC registers}
+\subsection{Interrupt set-enable registers (NVIC\_ISERx)}
+\subsection{Interrupt clear-enable registers (NVIC\_ICERx)}
+\subsection{Interrupt set-pending registers (NVIC\_ISPRx)}
+\subsection{Interrupt clear-pending registers (NVIC\_ICPRx)}
+\subsection{Interrupt active bit registers (NVIC\_IABRx)}
+\subsection{Interrupt priority registers (NVIC\_IPRx)}
+\subsection{Software trigger interrupt register (NVIC\_STIR)}
+\subsection{Level-sensitive and pulse interrupts}
+\subsection{NVIC design hints and tips}
+\subsection{NVIC register map}
+
+\section{System control block (SCB)}
+\subsection{Auxiliary control register (SCB\_ACTLR)}
+\subsection{CPUID base register (SCB\_CPUID)}
+\subsection{Interrupt control and state register (SCB\_ICSR)}
+\subsection{Vector table offset register (SCB\_VTOR)}
+\subsection{Application interrupt and reset control register (SCB\_AIRCR)}
+\subsection{System control register (SCB\_SCR)}
+\subsection{Configuration and control register (SCB\_CCR)}
+\subsection{System handler priority registers (SHPRx)}
+\subsection{System handler control and state register (SCB\_SHCSR)}
+\subsection{Configurable fault status register (SCB\_CFSR)}
+\subsection{Hard fault status register (SCB\_HFSR)}
+\subsection{Memory management fault address register (SCB\_MMFAR)}
+\subsection{Bus fault address register (SCB\_BFAR)}
+\subsection{System control block design hints and tips}
+\subsection{SCB register map}
+
+\section{SysTick timer (STK)}
+\subsection{SysTick control and status register (STK\_CTRL)}
+\subsection{SysTick reload value register (STK\_LOAD)}
+\subsection{SysTick current value register (STK\_VAL)}
+\subsection{SysTick calibration value register (STK\_CALIB)}
+\subsection{SysTick design hints and tips}
+\subsection{SysTick register map}
+
+\chapter{История изменений}
+

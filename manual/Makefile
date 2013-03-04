@@ -21,6 +21,7 @@ TEX = book.tex intro.tex \
 	firststep\firststep.tex \
 		firststep\blink\blink.tex firststep\blink\blink.c \
 	versioncontrol/git.tex versioncontrol/*.jpg \
+	STM32\STM32.tex \
 	Makefile
 	
 firststep\blink\blink.c: ..\src\blink\blink.c utf2win.py

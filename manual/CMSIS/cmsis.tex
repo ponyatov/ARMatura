@@ -8,28 +8,26 @@
 \input{CMSIS/startup}
 \chapter{Стандартная библиотека STM32}
 
+\section{Установка}
+
 Для работы необходимо скачать библиотеки поддержки от ST:
 
 \bigskip
 
-STSW-STM32078: STM32VLDISCOVERY\ref{STM32VLDISCOVERY} firmware package (AN3268)
-
-\url{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32078.zip}
-
-STSW-STM32068: STM32VLDISCOVERY\ref{STM32VLDISCOVERY} firmware package (AN3268)
-
-\url{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32068.zip}
-
-STSW-STM32065: STM32F4 DSP and standard peripherals library, including 82 examples
-
-\url{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stm32f4_dsp_stdperiph_lib.zip}
+\begin{tabular}{r l l}
+BSP&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32078.zip}{STSW-STM32078}&\stmvld\ firmware package (AN3268)\\
+SPL&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32054.zip}{STSW-STM32054}&STM32F10x standard peripheral library\\
+BSP&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32068.zip}{STSW-STM32068}&\stmdisco\ board firmware package\\
+SPL&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stm32f4_dsp_stdperiph_lib.zip}{STSW-STM32065}&STM32F4 DSP and standard peripherals library\\
+\end{tabular}
 
 \bigskip
-
-\begin{tabular}{l l}
-STSW-STM32078&STM32VLDISCOVERY\ref{STM32VLDISCOVERY} firmware package (AN3268)\\
-STSW-STM32068&STM32F4DISCOVERY\ref{STM32F4DISCOVERY} board firmware package, including 22 examples\\
-STSW-STM32065&STM32F4 DSP and standard peripherals library, including 82 examples\\
+\begin{tabular}{r l p{8cm}}
+BSP & \keys{B}oard \keys{S}upport \keys{P}ackage & пакет поддержки конкретной демоплаты,
+содержит библиотеки ядра + библиотеки работы с наплатным железом, 
+макросы описания выводов, библиотеки работы с внешними чипами \\
+SPL & \keys{S}tandard \keys{P}eripheral \keys{L}ibrary & пакет содержит
+только библиотеки ядра и встроенной в кристалл переферии (таймеры, ЦАП\etc)\\
 \end{tabular}
 
 \input{CMSIS/STM32/stm32f4xx}
