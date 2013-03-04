@@ -15,6 +15,7 @@ TEX = book.tex intro.tex PION.tex CPU_table.tex \
 	QA/*.tex \
 	apps/*.tex apps/*.jpg \
 	CMSIS/STM32/*.tex CMSIS/STM32/keilstartup.s \
+	versioncontrol/git.tex versioncontrol/*.jpg \
 	Makefile
 	
 CMSIS/STM32/keilstartup.s: ../lib/STM32F4/keil_startup_stm32f4xx.s
