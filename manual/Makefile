@@ -1,31 +1,38 @@
-all: pdf
-
-dvi: book.dvi
-pdf: book.pdf
+all: book.pdf
 
 clean:
 	rm -f *.dvi *.log *.toc *.aux *.lol
 	rm -f CMSIS/STM32/*.s CMSIS/STM32/*.c
 
-TEX = book.tex intro.tex PION.tex CPU_table.tex \
-	keil/keil.tex keil/install.tex keil/*.jpg keil/cfg/keilconfig.tex \
-	hardware/*.jpg hardware/*.tex \
-	stlink/*.tex stlink/*.jpg \
-	blink/*.tex \
+TEX = book.tex intro.tex \
+	IDE\ide.tex \
+		IDE\Keil\keil.tex IDE\Keil\0.jpg IDE\Keil\prjconfig\keilconfig.tex \
+		IDE\Eclipse\eclipse.tex IDE\Eclipse\0.jpg \
+	hardware/*.jpg hardware/*.tex hardware\CPU_table.tex \
+		hardware\PION\pion.tex \
 	QA/*.tex \
 	apps/*.tex apps/*.jpg \
-	CMSIS/STM32/*.tex CMSIS/STM32/keilstartup.s \
+	CMSIS/*.tex \
+		CMSIS/STM32/*.tex CMSIS/STM32/keilstartup.s \
+	adapter\adapters.tex \
+		adapter\jtag\jtag.tex \
+		adapter\stlink\stlink.tex adapter\stlink\install\install.tex \
+	debug\debug.tex \
+	firststep\firststep.tex \
+		firststep\blink\blink.tex firststep\blink\blink.c \
 	versioncontrol/git.tex versioncontrol/*.jpg \
 	Makefile
+	
+firststep\blink\blink.c: ..\src\blink\blink.c utf2win.py
+	\python\python.exe utf2win.py $< $@	
 	
 CMSIS/STM32/keilstartup.s: ../lib/STM32F4/keil_startup_stm32f4xx.s
 	cp $< $@	
 	
-book.toc: $(TEX)
-	pdflatex $(TEX)
-	
-book.pdf: book.toc
-	pdflatex $(TEX)
-
-book.dvi: $(TEX)
-	latex $< && latex $< && latex $<
+book.pdf: $(TEX)
+	pdflatex -draftmode book.tex
+#	bibtex file # or biber
+#	makeindex book.idx # if needed
+#	makeindex -s book.gls ...# for glossary if needed
+#	pdflatex -draftmode book.tex
+	pdflatex book.tex

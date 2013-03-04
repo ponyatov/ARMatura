@@ -3,6 +3,7 @@
 %\usepackage[T2A,T1]{fontenc}
 \usepackage[cp1251]{inputenc}
 \usepackage{babel}
+\usepackage{indentfirst}
 
 \usepackage[left=2.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 
@@ -14,10 +15,12 @@
 \usepackage{dirtree}
 \usepackage{amsmath}
 \usepackage{lscape}
+\usepackage{wasysym}
 
 \usepackage{listings}
 \lstloadlanguages{{[ISO]C++},{[gnu]make},Python,bash}
 \lstset{
+	inputencoding=cp1251, extendedchars=true,
 	language={[ISO]C++},
 	basicstyle=\small\ttfamily,
 	keywordstyle=\color{Blue},
@@ -27,7 +30,6 @@
 	numberstyle=\color{MidnightBlue},
 	showstringspaces=true,
 %	showtabs=true,
-	extendedchars=true,
 	frame=trBL,frameround=tttt,
 	tabsize=4,
 	emphstyle=\underbar%,
@@ -45,12 +47,18 @@
 %\newcommand{\email}[2]{\emph{#1\ <#2>}}
 
 \newcommand{\cpp}{$C^{+^{+}}$}
-%\newcommand{\tm}{$^{^{TM}}$}
 \newcommand{\arm}{ARM}
 \newcommand{\cortex}[1]{Cortex-#1}
 \newcommand{\armatura}{\arm atura}
-\newcommand{\cmsis}{CMSIS}
+\newcommand{\cmsis}{CMSIS\ref{cmsis}}
+\newcommand{\bus}{ARMAbus}
+\newcommand{\eclipse}{Eclipse\ref{eclipse}}
+\newcommand{\gdb}{GDB\ref{gdb}}
+\newcommand{\keil}{Keil\ref{keil}}
 \newcommand{\etc}{,\ldots}
+
+\newcommand{\stmdisco}{STM32F4DISCOVERY\ref{STM32F4DISCOVERY}}
+\newcommand{\stlink}{STlink\ref{stlink}}
 
 \begin{document}
 \title{Контроллеры ARMatura}
@@ -66,53 +74,27 @@
 
 \part{Железо}\input{hardware/hardware}
 
-\part{Первые шаги}
-\chapter{Установка пакета ПО STlink}\input{stlink/install}
-\chapter{Установка Keil MDK-ARM}\label{keil}
-\input{keil/keil}
-\input{keil/install}
-\input{blink/blink}
-\chapter{Hell Of World}
+\input{firststep/firststep}
 
 \part{Средства разработки}
-\chapter{Keil MDK-ARM}\input{keil/keil}
+
+\input{IDE/ide}
+
 \chapter{Компиляторы}
 \section{GCC}\label{gcc}
 \section{KeilCC}
 \section{IAR}
-\chapter{IDE}
-\section{Eclipse}\label{eclipse}
-\section{Code::Blocks}
-\section{gVim}
-\section{Keil uVision}
-\section{IAR}
-\chapter{Программаторы}
-\section{STlink}
-\section{Serial Boot}
-\chapter{Отладчики}
-\section{JTAG}
-\section{STM32 SWD}
-\section{GDB}
-\subsection{STlink gdbserver}
-\subsection{OpenOCD}
+
+\input{adapter/adapters}
+
+\input{debug/debug}
 
 \part{Основы языка \cpp}
 \chapter{Синтаксис}
 \chapter{Типы данных}
 \chapter{Стандартная библиотека libc}
 
-\part{Отладка}
-\chapter{JTAG}
-\chapter{GDB}
-\chapter{OpenOCD}
-
-\begin{landscape}
-\part{CMSIS}\label{cmsis}
-\input{CMSIS/startup}
-\chapter{Стандартная библиотека STM32}
-\input{CMSIS/STM32/stm32f4xx}
-\chapter{USB client/host}
-\end{landscape}
+\input{CMSIS/cmsis}
 
 \part{Ядро \cortex{Mx}}
 \chapter{Режимы ARM и Thumb}
@@ -149,6 +131,7 @@
 \part{Встраиваемый Linux}\label{linux}
 \input{QA/QA}
 \part{Приложения}
-\chapter{Сводная таблица процессоров}\input{CPU_table}
+\input{hardware/CPU_table}
+
 \end{document}
 

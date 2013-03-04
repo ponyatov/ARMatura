@@ -1,0 +1,156 @@
+\chapter{Первый проект: blink}\label{blink}
+
+\bigskip
+\includegraphics[width=\textwidth]{firststep/blink/125.jpg}
+
+\bigskip
+\includegraphics{firststep/blink/126.jpg}
+
+\bigskip
+\includegraphics[width=\textwidth]{firststep/blink/15.jpg}
+\bigskip
+
+При необходимости можно изменить настройки проекта см. \ref{keilconfig}.
+Перенастройка может понадобиться если вы пытаетесь работать не с \stmdisco, а с другой платой
+или самопальной железкой. Также перенастройка может понадобится если почему-то не срабатывает
+подключение к адаптеру \stlink.
+
+\bigskip
+Собираем проект, нажав клавишу \keys{F7}:
+
+\bigskip
+\includegraphics[width=\textwidth]{firststep/blink/8.jpg}
+\bigskip
+
+Проект успешно собрался, теперь можно проставить на \lstinline+main()+ точку останова (breakpoint)
+переместив курсор на заголовок функции и нажав кнопку \keys{F9}. При работе программы в отладочном 
+режиме работа программы останавливается на точках останова, позволяя посмотреть состояние регистров 
+процессора, переменных и т.п.
+
+\bigskip
+\includegraphics{firststep/blink/9.jpg}
+\bigskip
+
+Затем запускаем отладку нажав \keys{Ctrl+F5}
+
+\bigskip
+\includegraphics{firststep/blink/10.jpg}
+\bigskip
+
+Вывалится диалог с сообщением об использовании оценочной версии \keil.
+
+\bigskip
+\includegraphics{firststep/blink/11.jpg}
+\bigskip
+
+После дрыганья окнами откроется отладочный режим:
+
+\bigskip
+\includegraphics[width=\textwidth]{firststep/blink/13.jpg}
+\bigskip
+
+В окне редактора автоматически откроется код \verb+keil_startup_stm32f4xx.s+
+
+В окне \verb+Register+ показыватся состояние регистров процессора, В верхней части
+расположено окно дизасемблированного кода, снизу слева командная консоль отладчика,
+снизу справа --- просмотр стека и памяти.
+
+Подробно работа с отладчиком описана в разделе \ref{keildebug}, при желании вы можете
+пройтись в пошаговом режиме (нажимая кнопку \keys{F11}) по коду инициализации,
+и глядя в даташит на ваш микроконтроллер, и попытаться разобраться что именно делает 
+код инициализации\ref{startup}.
+
+Пока же разборки с работой в отладчике можно отложить, поэтому останавливаем отладчик нажатием
+на \keys{Ctrl-F5}, подключаем отладочную плату, если она оказалась отключенной, и нажимаем
+\menu{Flash>Download}\ или иконку в тулбаре:
+
+\bigskip
+\includegraphics{firststep/blink/14.jpg}
+\bigskip
+
+Запускается прошивка флешпамяти на отладочной плате, на программаторе мигает светодиод передачи данных,
+и после успешной прошивки наша плата перестает подавать признаки жизни, так как мы забыли написать код,
+мигающий светодиодами, или выполняющий более полезные функции (см. скриншот исходного кода).
+
+\section{Структура файлов}
+
+\dirtree{%
+.1 ARMatura.
+.2 startup \DTcomment{код инициализации ядра процессора}.
+.3 keil\_startup\_stm32f4xx.s \DTcomment{ассемблерный код инициализации}.
+.3 system\_stm32f4xx.c \DTcomment{сишный код инициализации STM32F4}.
+.4 system\_stm32f4xx.h \DTcomment{сишный код инициализации STM32F4}.
+.4 stm32f4xx.h \DTcomment{STM32F4 \cmsis\ Cortex-M4 Device Peripheral}.
+.5 core\_cm4.h \DTcomment{\cmsis\ библиотека поддержки ядра \cortex{M4}}.
+.5 stdint.h \DTcomment{стандартные целые типы \cpp}.
+.5 core\_cmInstr.h \DTcomment{\cmsis\ Core Instruction Interface}.
+.5 core\_cmFunc.h \DTcomment{\cmsis\ Core Register Access Functions}.
+.5 core\_cm4\_simd.h \DTcomment{\cmsis\ \cortex{M4} расширение SIMD/DSP}.
+.2 blink.
+.3 blink.c \DTcomment{простая программа мигания светодиодом или дрыгания ногой}.
+.4 stm32f4xx.h.
+}
+
+\bigskip
+
+В отличие от кристаллов типа Atmel AVR, при программировании для архитектуры \cortex{Mx}
+принято использовать готовую библиотеку \cmsis, 
+для которой проводится активная стандартизация среди производителей процессоров.
+
+\bigskip
+\menu{Cortex>Microcontroller>Software>Interface>Standard}
+\bigskip 
+
+\bigskip
+\url{http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php}
+\bigskip
+
+Кроме основной части \cmsis, общей для всех производителей МК \cortex{Mx}, каждый подставщик
+предоставляет аппаратно-зависимую часть библиотеки:
+\begin{itemize}
+  \item стартовый код инициализации ядра процессора
+  \item библиотеку периферии например STM32F Standard Peripherial Library, включающую код
+  обеспечивающий доступ к устройствам, встроенным в кристалл в т.ч.
+  \item USB OTG Host \& Device 
+  \item DSP/SIMD Extension (для \cortex{M4F}) системо-зависимую часть расширения \cmsis\ DSP
+\end{itemize}
+
+\bigskip
+Библиотеки доступны для загрузки тут:
+
+\bigskip
+\paragraph{STSW-STM32065}
+
+STM32F4 DSP and standard peripherals library, including 82 examples for 26 different peripherals and template project for 5 different IDEs
+
+\url{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stm32f4_dsp_stdperiph_lib.zip}
+\bigskip
+
+\section{blink.c}
+
+Сначала поcмотрим код основной программы:
+
+\lstinputlisting[
+	label=blink.c,
+	caption={[blink.c]/src/blink/blink.c},
+	emph={stm32f4xx}%,
+	%inputencoding=utf8
+]{firststep/blink/blink.c}
+
+Как видим --- в ней нет абсолютно ничего сложного: только подключение библиотеки
+нашего МК и единственная функция \lstinline+int main(void)+, содержащая только 
+возврат в стартовый код \cmsis\ значения по умолчанию --- 0.
+
+\bigskip
+
+Файл \verb+stm32f4xx.h+ подробно рассмотрен в \ref{stm32f4xx.h}\ --- на текущем
+слое знаний не стоит в него углубляться: он слишком большой и содержит практически
+весь список функционала, обеспечиваемый \cmsis.
+
+То же самое можно сказать и о других файлах --- все они относятся либо к библиотеке
+\cmsis, либо к файлам поддержки производителя чипов.
+
+Подробности будут рассмотрены далее в разделе \ref{cmsis}, а пока важнее получить
+практический результат.
+  
+

@@ -6,8 +6,23 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>org.python.pydev.PyDevBuilder</name>
+			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<triggers>full,incremental,</triggers>
 			<arguments>
+				<dictionary>
+					<key>LaunchConfigHandle</key>
+					<value>&lt;project&gt;/.externalToolBuilders/net.sourceforge.texlipse.builder.TexlipseBuilder.launch</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>LaunchConfigHandle</key>
+					<value>&lt;project&gt;/.externalToolBuilders/org.python.pydev.PyDevBuilder.launch</value>
+				</dictionary>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
@@ -30,6 +45,11 @@
 			<name>manual/.tex</name>
 			<type>1</type>
 			<location>C:/LaTeX/MiKTeX/tex/latex/tools/.tex</location>
+		</link>
+		<link>
+			<name>manual/CMSIS/.tex</name>
+			<type>1</type>
+			<location>C:/LaTeX/tex/latex/tools/.tex</location>
 		</link>
 	</linkedResources>
 </projectDescription>

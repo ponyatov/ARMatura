@@ -1,0 +1,43 @@
+\section{Eclipse}\label{eclipse}
+
+\subsection{Установка}
+
+Для работы нам потребуется сборка \eclipse\ в варианте \emph{}
+
+\bigskip
+\url{http://www.eclipse.org/downloads/}
+
+\url{http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/juno/SR2/eclipse-cpp-juno-SR2-win32.zip}
+\bigskip
+
+Пакет поставляется в виде zip-архива, который достаточно распаковать в любое место,
+например в \verb+C:\Eclipse\+.
+
+После запуска нужно будет указать каталог для хранения проектов: \verb+C:\w\+.
+
+\bigskip
+\includegraphics[width=\textwidth]{IDE/Eclipse/1.jpg}
+\bigskip
+
+\subsection{Настройка глобальных свойств}
+
+Глобальные свойдства настраиваются в меню \menu{WIndows>Preferences}.
+
+\bigskip
+
+Прежде всего настроим автосохранение при запуске \verb+Build+ \keys{Ctrl+B}:
+
+\begin{itemize}
+  \item запуск сборки при сохранении файла
+  \item автоматическое сохранение всех измененных файлов перед сборкой
+  \item автосохранение рабочих файлов
+  \item кодировка файлов с кириллицей (может потребоваться корректировка при импорте
+  файлов в кодировках KOI8, UTF8)
+  \item конец строки в стиле dos/windows: \verb+<CR><LF>+ (в UNIX используется только \verb+<LF>+)
+\end{itemize}
+
+\bigskip
+\includegraphics[width=\textwidth]{IDE/Eclipse/0.jpg}
+
+
+

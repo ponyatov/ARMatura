@@ -392,9 +392,9 @@
           <GroupName>startup</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32f4xx.s</FileName>
+              <FileName>keil_startup_stm32f4xx.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\lib\STM32F4\startup_stm32f4xx.s</FilePath>
+              <FilePath>..\lib\STM32F4\keil_startup_stm32f4xx.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32f4xx.c</FileName>

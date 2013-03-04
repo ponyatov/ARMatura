@@ -3,10 +3,9 @@
  * https://github.com/ponyatov/ARMatura
 */
 
-#include <stm32f4xx.h> // загрузить CMSIS-библиотеку STM32Fx
+#include <stm32f4xx.h> // Р·Р°РіСЂСѓР·РёС‚СЊ CMSIS-Р±РёР±Р»РёРѕС‚РµРєСѓ STM32Fx
 
 int main()
 {
 	return 0;
-	char X[]="Hello World !";
 }
