@@ -350,7 +350,7 @@
               <MiscControls></MiscControls>
               <Define>STM32VLDISCOVERY,STM32F10X_LD_VL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc</IncludePath>
+              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc;..\lib\BSP\STM32VLDISCOVERY</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -366,7 +366,7 @@
               <MiscControls></MiscControls>
               <Define>STM32VLDISCOVERY,STM32F10X_LD_VL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc</IncludePath>
+              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc;..\lib\BSP\STM32VLDISCOVERY</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
