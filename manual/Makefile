@@ -1,4 +1,7 @@
-all: book.pdf
+all: dvi
+
+dvi: book.dvi
+pdf: book.pdf
 
 clean:
 	rm -f *.dvi *.log *.toc *.aux *.lol
@@ -44,3 +47,8 @@ book.pdf: $(TEX)
 #	makeindex -s book.gls ...# for glossary if needed
 #	pdflatex -draftmode book.tex
 	pdflatex book.tex
+
+book.dvi: $(TEX)
+	pdflatex -draftmode book.tex
+	pdflatex book.tex
+	

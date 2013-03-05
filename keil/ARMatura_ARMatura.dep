@@ -1,18 +1,18 @@
 Dependencies for Project 'ARMatura', Target 'ARMatura': (DO NOT MODIFY !)
-F (..\lib\STM32F4\keil_startup_stm32f4xx.s)(0x512C899C)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x --list "..\bin\keil_startup_stm32f4xx.lst" --xref -o "..\bin\keil_startup_stm32f4xx.o" --depend "..\bin\keil_startup_stm32f4xx.d")
-F (..\lib\STM32F4\system_stm32f4xx.c)(0x4F54918C)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -o "..\bin\system_stm32f4xx.o" --omf_browse "..\bin\system_stm32f4xx.crf" --depend "..\bin\system_stm32f4xx.d")
-I (..\lib\STM32F4\stm32f4xx.h)(0x4F5497FC)
+F (..\lib\STM32F4\keil_startup_stm32f4xx.s)(0x5135F1F3)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x --list "..\bin\keil_startup_stm32f4xx.lst" --xref -o "..\bin\keil_startup_stm32f4xx.o" --depend "..\bin\keil_startup_stm32f4xx.d")
+F (..\lib\STM32F4\system_stm32f4xx.c)(0x5135F1F3)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -o "..\bin\system_stm32f4xx.o" --omf_browse "..\bin\system_stm32f4xx.crf" --depend "..\bin\system_stm32f4xx.d")
+I (..\lib\STM32F4\stm32f4xx.h)(0x5135F1F3)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm4.h)(0x508793BE)
 I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x508793BE)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x508793BE)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x508793BE)
-I (..\lib\STM32F4\system_stm32f4xx.h)(0x4F54918C)
-F (..\src\blink\blink.c)(0x51343948)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -o "..\bin\blink.o" --omf_browse "..\bin\blink.crf" --depend "..\bin\blink.d")
-I (..\lib\STM32F4\stm32f4xx.h)(0x4F5497FC)
+I (..\lib\STM32F4\system_stm32f4xx.h)(0x5135F1F3)
+F (..\src\blink\blink.c)(0x5135F1F3)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\lib\STM32F4 -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -o "..\bin\blink.o" --omf_browse "..\bin\blink.crf" --depend "..\bin\blink.d")
+I (..\lib\STM32F4\stm32f4xx.h)(0x5135F1F3)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm4.h)(0x508793BE)
 I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x508793BE)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x508793BE)
 I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x508793BE)
-I (..\lib\STM32F4\system_stm32f4xx.h)(0x4F54918C)
+I (..\lib\STM32F4\system_stm32f4xx.h)(0x5135F1F3)
