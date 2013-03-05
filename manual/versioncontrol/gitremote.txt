@@ -1,0 +1,4 @@
+C:\Documents and Settings\user> cd \w\ARMatura
+C:\w\ARMatura> git remote -v
+origin  git@github.com:ponyatov/ARMatura.git (fetch)
+origin  git@github.com:ponyatov/ARMatura.git (push)

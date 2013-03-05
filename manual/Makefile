@@ -20,8 +20,15 @@ TEX = book.tex intro.tex \
 	debug\debug.tex \
 	firststep\firststep.tex \
 		firststep\blink\blink.tex firststep\blink\blink.c \
-	versioncontrol/git.tex versioncontrol/*.jpg \
+	versioncontrol/vcs.tex \
+		versioncontrol/git.tex \
+		versioncontrol/svn.tex \
+		versioncontrol/cvs.tex \
+		versioncontrol/mercurial.tex \
+		versioncontrol/bazaar.tex \
+		versioncontrol/*.jpg \
 	STM32\STM32.tex \
+	Wiring\wiring.tex \
 	Makefile
 	
 firststep\blink\blink.c: ..\src\blink\blink.c utf2win.py

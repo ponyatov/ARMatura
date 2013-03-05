@@ -23,6 +23,8 @@
 	inputencoding=cp1251, extendedchars=true,
 	language={[ISO]C++},
 	basicstyle=\small\ttfamily,
+	emphstyle=\color{BurntOrange},
+	emphstyle={[2]\color{JungleGreen}},
 	keywordstyle=\color{Blue},
 	commentstyle=\color{OliveGreen},
 	identifierstyle=\color{RubineRed},
@@ -31,9 +33,8 @@
 	showstringspaces=true,
 %	showtabs=true,
 	frame=trBL,frameround=tttt,
-	tabsize=4,
-	emphstyle=\underbar%,
-%	morestring=[s]{<}{>}
+%	morestring=[s]{<}{>},
+	tabsize=4
 	}
 
 \usepackage[colorlinks=true,
@@ -55,7 +56,8 @@
 \newcommand{\eclipse}{Eclipse\ref{eclipse}}
 \newcommand{\gdb}{GDB\ref{gdb}}
 \newcommand{\keil}{Keil\ref{keil}}
-\newcommand{\etc}{,\ldots}
+\newcommand{\etc}{,..}
+\newcommand{\wiring}{Wiring\ref{wiring}}
 
 \newcommand{\stmvld}{STM32VLDISCOVERY\ref{STM32VLDISCOVERY}}
 \newcommand{\stmdisco}{STM32F4DISCOVERY\ref{STM32F4DISCOVERY}}
@@ -95,6 +97,8 @@
 \chapter{“ипы данных}
 \chapter{—тандартна€ библиотека libc}
 
+\input{Wiring/wiring}
+
 \input{CMSIS/cmsis}
 
 \part{ядро \cortex{Mx}}
@@ -126,7 +130,7 @@
 \input{apps/GPS}
 \input{apps/GSM}
 
-\input{versioncontrol/git}
+\input{versioncontrol/vcs}
 
 \chapter{шина Dallas 1Wire}
 \section{RTC}

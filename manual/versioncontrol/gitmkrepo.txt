@@ -1,0 +1,4 @@
+C:\Documents and Settings\user> cd \w\
+C:\w> mkdir YourProject
+C:\w> cd YourProject
+C:\w\ARMatura> git init

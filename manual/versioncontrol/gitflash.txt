@@ -1,0 +1,29 @@
+C:\Documents and Settings\user> H:
+H:\> mkdir ARMatura_C
+H:\> cd ARMatura_C
+H:\ARMatura_C> git init
+Initialized empty Git repository in H:/ARMatura_C/.git/
+H:\ARMatura_C>git remote -v
+
+H:\ARMatura_C>git remote add local C:\w\ARMatura
+
+H:\ARMatura_C>git remote add github git@github.com:ponyatov/ARMatura.git
+
+H:\ARMatura_C>git remote -v
+github  git@github.com:ponyatov/ARMatura.git (fetch)
+github  git@github.com:ponyatov/ARMatura.git (push)
+local   C:\w\ARMatura (fetch)
+local   C:\w\ARMatura (push)
+
+H:\ARMatura_C>git pull local master
+remote: Counting objects: 612, done.
+remote: Compressing objects: 100% (377/377), done.
+remote: Total 612 (delta 234), reused 528 (delta 192)
+Receiving objects: 100% (612/612), 46.39 MiB | 5.89 MiB/s, done.
+Resolving deltas: 100% (234/234), done.
+From C:\w\ARMatura
+ * branch            master     -> FETCH_HEAD
+
+H:\ARMatura_C>git push -u local master
+Branch master set up to track remote branch master from local.
+Everything up-to-date
