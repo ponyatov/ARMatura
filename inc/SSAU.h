@@ -11,7 +11,9 @@
 #endif
 
 #ifdef STM32F4DISCOVERY
-	#define STM32F40XX
+	#ifndef STM32F40XX
+		#define STM32F40XX
+	#endif
 #endif
 
 #ifdef STM32F40XX
