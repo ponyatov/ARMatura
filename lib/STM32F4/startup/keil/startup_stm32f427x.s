@@ -1,15 +1,15 @@
-;******************** (C) COPYRIGHT 2012 STMicroelectronics ********************
-;* File Name          : startup_stm32f4xx.s
+;******************** (C) COPYRIGHT 2013 STMicroelectronics ********************
+;* File Name          : startup_stm32f427x.s
 ;* Author             : MCD Application Team
-;* Version            : V1.0.2
-;* Date               : 05-March-2012
-;* Description        : STM32F4xx devices vector table for MDK-ARM toolchain. 
+;* Version            : V1.1.0
+;* Date               : 11-January-2013
+;* Description        : STM32F427x/437x devices vector table for MDK-ARM toolchain. 
 ;*                      This module performs:
 ;*                      - Set the initial SP
 ;*                      - Set the initial PC == Reset_Handler
 ;*                      - Set the vector table entries with the exceptions ISR address
 ;*                      - Configure the system clock and the external SRAM mounted on 
-;*                        STM324xG-EVAL board to be used as data memory (optional, 
+;*                        STM324x7I-EVAL board to be used as data memory (optional, 
 ;*                        to be enabled by user)
 ;*                      - Branches to __main in the C library (which eventually
 ;*                        calls main()).
@@ -166,7 +166,12 @@ __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     CRYP_IRQHandler                   ; CRYP crypto                                     
                 DCD     HASH_RNG_IRQHandler               ; Hash and Rng
                 DCD     FPU_IRQHandler                    ; FPU
-                         
+                DCD     UART7_IRQHandler                  ; UART7
+                DCD     UART8_IRQHandler                  ; UART8
+                DCD     SPI4_IRQHandler                   ; SPI4
+                DCD     SPI5_IRQHandler                   ; SPI5
+                DCD     SPI6_IRQHandler                   ; SPI6
+                                         
 __Vectors_End
 
 __Vectors_Size  EQU  __Vectors_End - __Vectors
@@ -312,7 +317,12 @@ Default_Handler PROC
                 EXPORT  DCMI_IRQHandler                   [WEAK]                                             
                 EXPORT  CRYP_IRQHandler                   [WEAK]                                     
                 EXPORT  HASH_RNG_IRQHandler               [WEAK]
-                EXPORT  FPU_IRQHandler                    [WEAK]                
+                EXPORT  FPU_IRQHandler                    [WEAK]
+                EXPORT  UART7_IRQHandler                  [WEAK]
+                EXPORT  UART8_IRQHandler                  [WEAK]
+                EXPORT  SPI4_IRQHandler                   [WEAK]
+                EXPORT  SPI5_IRQHandler                   [WEAK]
+                EXPORT  SPI6_IRQHandler                   [WEAK]
 
 WWDG_IRQHandler                                                       
 PVD_IRQHandler                                      
@@ -395,8 +405,12 @@ OTG_HS_IRQHandler
 DCMI_IRQHandler                                                            
 CRYP_IRQHandler                                                    
 HASH_RNG_IRQHandler
-FPU_IRQHandler                                                 
-
+FPU_IRQHandler  
+UART7_IRQHandler                  
+UART8_IRQHandler                  
+SPI4_IRQHandler                   
+SPI5_IRQHandler                   
+SPI6_IRQHandler                                   
                 B       .
 
                 ENDP
