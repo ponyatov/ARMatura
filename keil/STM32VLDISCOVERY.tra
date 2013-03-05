@@ -13,10 +13,10 @@
 ### ADS-LD Output File: 'STM32VLDISCOVERY.axf'
 ### ADS-LD Command File: 'STM32VLDISCOVERY.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'STM32VLDISCOVERY.lnp', Handle=0x00000618
+### Creating CmdFile 'STM32VLDISCOVERY.lnp', Handle=0x00000330
 ### Writing '.lnp' file
 ### ADS-LD Command file 'STM32VLDISCOVERY.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
-### ADS-LD: executed with 0 errors
+### ADS-LD: executed with 2 errors
 ### Updating obj list
 ### LDADS_file() completed.

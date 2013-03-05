@@ -426,6 +426,16 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32f4_discovery.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\lib\BSP\STM32F4DISCOVERY\stm32f4_discovery.c</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>

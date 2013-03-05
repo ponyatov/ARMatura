@@ -405,6 +405,13 @@
         </Group>
         <Group>
           <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32f10x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\lib\STM32F10x\src\stm32f10x_gpio.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>src</GroupName>
@@ -423,6 +430,16 @@
               <FileName>SSAU.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\..\src\SSAU.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>STM32vldiscovery.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\lib\BSP\STM32VLDISCOVERY\STM32vldiscovery.c</FilePath>
             </File>
           </Files>
         </Group>
