@@ -1,4 +1,5 @@
-STSW-STM32065: stm32f4_dsp_stdperiph_lib.zip
-STSW-STM23078: stsw-stm32078_stm32vld.zip
-
-
+STM32F4DISCOVERY_fabric_firmware.rar
+stm32f4_dsp_stdperiph_lib.zip
+stsw-stm32054.zip
+stsw-stm32068.zip
+stsw-stm32078.zip
