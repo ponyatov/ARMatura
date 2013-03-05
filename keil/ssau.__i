@@ -1,5 +1,5 @@
---cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc 
+--cpp -c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F4\inc -I..\lib\BSP\STM32F4DISCOVERY 
 -I C:\ARM\Keil\ARM\RV31\INC 
 -I C:\ARM\Keil\ARM\CMSIS\Include 
--I C:\ARM\Keil\ARM\Inc\ST\STM32F10x 
--DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "ssau.o" --omf_browse "ssau.crf" --depend "ssau.d" "..\src\SSAU.cpp"
+-I C:\ARM\Keil\ARM\Inc\ST\STM32F4xx 
+-DSTM32F4DISCOVERY -DSTM32F40XX -o "ssau.o" --omf_browse "ssau.crf" --depend "ssau.d" "..\src\SSAU.cpp"

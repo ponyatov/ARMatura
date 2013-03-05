@@ -280,17 +280,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -300,7 +300,7 @@
                 <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -348,9 +348,9 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -364,9 +364,9 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
@@ -390,9 +390,41 @@
       <Groups>
         <Group>
           <GroupName>startup</GroupName>
+          <Files>
+            <File>
+              <FileName>system_stm32f10x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\lib\STM32F10x\src\system_stm32f10x.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f10x_ld_vl.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\..\lib\STM32F10x\startup\keil\startup_stm32f10x_ld_vl.s</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>src</GroupName>
+          <Files>
+            <File>
+              <FileName>blink.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\..\src\blink\blink.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SSAU</GroupName>
+          <Files>
+            <File>
+              <FileName>SSAU.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\..\src\SSAU.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

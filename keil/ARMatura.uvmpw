@@ -13,4 +13,8 @@
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
+  <project>
+    <PathAndName>.\STM32F4DISCOVERY.uvproj</PathAndName>
+  </project>
+
 </ProjectWorkspace>

@@ -1,8 +1,9 @@
 ssau.o: ..\src\SSAU.cpp
 ssau.o: ..\inc\SSAU.h
-ssau.o: C:\ARM\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h
-ssau.o: C:\ARM\Keil\ARM\CMSIS\Include\core_cm3.h
+ssau.o: ..\lib\STM32F4\inc\stm32f4xx.h
+ssau.o: ..\lib\CMSIS\inc\core_cm4.h
 ssau.o: C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h
-ssau.o: C:\ARM\Keil\ARM\CMSIS\Include\core_cmInstr.h
-ssau.o: C:\ARM\Keil\ARM\CMSIS\Include\core_cmFunc.h
-ssau.o: C:\ARM\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
+ssau.o: ..\lib\CMSIS\inc\core_cmInstr.h
+ssau.o: ..\lib\CMSIS\inc\core_cmFunc.h
+ssau.o: ..\lib\CMSIS\inc\core_cm4_simd.h
+ssau.o: ..\lib\STM32F4\inc\system_stm32f4xx.h

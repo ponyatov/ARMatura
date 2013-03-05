@@ -1,27 +1,5 @@
 Dependencies for Project 'STM32VLDISCOVERY', Target 'STM32VLDISCOVERY': (DO NOT MODIFY !)
-F (.\..\lib\STM32F10x\startup\keil\startup_stm32f10x_ld_vl.s)(0x4D787516)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x --pd "STM32VLDISCOVERY SETA 1" --pd "STM32F10X_LD_VL SETA 1" --list ".\startup_stm32f10x_ld_vl.lst" --xref -o "startup_stm32f10x_ld_vl.o" --depend "startup_stm32f10x_ld_vl.d")
-F (.\..\lib\CMSIS\src\core_cm3.c)(0x5135FD72)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "core_cm3.o" --omf_browse "core_cm3.crf" --depend "core_cm3.d")
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-F (.\..\lib\STM32F10x\src\system_stm32f10x.c)(0x4D7874F0)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "system_stm32f10x.o" --omf_browse "system_stm32f10x.crf" --depend "system_stm32f10x.d")
-I (C:\ARM\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x508791F8)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm3.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x508791F8)
-F (.\..\src\blink\blink.cpp)(0x51360A3F)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "blink.o" --omf_browse "blink.crf" --depend "blink.d")
-I (..\inc\SSAU.h)(0x51360B0A)
-I (C:\ARM\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x508791F8)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm3.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x508791F8)
-F (.\..\src\SSAU.cpp)(0x513609CF)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "ssau.o" --omf_browse "ssau.crf" --depend "ssau.d")
-I (..\inc\SSAU.h)(0x51360B0A)
-I (C:\ARM\Keil\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x508791F8)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cm3.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x508793BE)
-I (C:\ARM\Keil\ARM\Inc\ST\STM32F10x\system_stm32f10x.h)(0x508791F8)
+F (.\..\lib\STM32F10x\src\system_stm32f10x.c)(0x4D7874F0)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "system_stm32f10x.o" --omf_browse "system_stm32f10x.crf" --depend "system_stm32f10x.d")
+F (.\..\lib\STM32F10x\startup\keil\startup_stm32f10x_ld_vl.s)(0x4D787516)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x --pd "STM32VLDISCOVERY SETA 1" --pd "STM32F10X_LD_VL SETA 1" --list ".\startup_stm32f10x_ld_vl.lst" --xref -o "startup_stm32f10x_ld_vl.o" --depend "startup_stm32f10x_ld_vl.d")
+F (.\..\src\blink\blink.cpp)(0x51362F3E)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "blink.o" --omf_browse "blink.crf" --depend "blink.d")
+F (.\..\src\SSAU.cpp)(0x51362F3E)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "ssau.o" --omf_browse "ssau.crf" --depend "ssau.d")

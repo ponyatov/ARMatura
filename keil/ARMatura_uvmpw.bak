@@ -10,6 +10,12 @@
   <project>
     <PathAndName>.\STM32VLDISCOVERY.uvproj</PathAndName>
     <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
+  </project>
+
+  <project>
+    <PathAndName>.\STM32F4DISCOVERY.uvproj</PathAndName>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
 </ProjectWorkspace>

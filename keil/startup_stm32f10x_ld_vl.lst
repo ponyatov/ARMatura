@@ -461,11 +461,11 @@ ARM Macro Assembler    Page 8
 
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=startup_
-stm32f10x_ld_vl.d -ostartup_stm32f10x_ld_vl.o -I..\inc -IC:\ARM\Keil\ARM\RV31\I
-NC -IC:\ARM\Keil\ARM\CMSIS\Include -IC:\ARM\Keil\ARM\Inc\ST\STM32F10x --predefi
-ne="__EVAL SETA 1" --predefine="STM32VLDISCOVERY SETA 1" --predefine="STM32F10X
-_LD_VL SETA 1" --list=.\startup_stm32f10x_ld_vl.lst ..\lib\STM32F10x\startup\ke
-il\startup_stm32f10x_ld_vl.s
+stm32f10x_ld_vl.d -ostartup_stm32f10x_ld_vl.o -I..\inc -I..\lib\CMSIS\inc -I..\
+lib\STM32F10x\inc -IC:\ARM\Keil\ARM\RV31\INC -IC:\ARM\Keil\ARM\CMSIS\Include -I
+C:\ARM\Keil\ARM\Inc\ST\STM32F10x --predefine="__EVAL SETA 1" --predefine="STM32
+VLDISCOVERY SETA 1" --predefine="STM32F10X_LD_VL SETA 1" --list=.\startup_stm32
+f10x_ld_vl.lst ..\lib\STM32F10x\startup\keil\startup_stm32f10x_ld_vl.s
 
 
 
