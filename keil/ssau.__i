@@ -1,0 +1,5 @@
+--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc 
+-I C:\ARM\Keil\ARM\RV31\INC 
+-I C:\ARM\Keil\ARM\CMSIS\Include 
+-I C:\ARM\Keil\ARM\Inc\ST\STM32F10x 
+-DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "ssau.o" --omf_browse "ssau.crf" --depend "ssau.d" "..\src\SSAU.cpp"
