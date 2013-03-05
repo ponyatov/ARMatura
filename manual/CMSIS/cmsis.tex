@@ -1,14 +1,14 @@
-\part{CMSIS}\label{cmsis}
+\part{CMSIS STM32}\label{cmsis}
 
 В этом разделе будут описаны только \emph{некоторые} части библиотеки \cmsis\ для STM32F,
 которые используются в коде \armatura. Объяснить это очень просто --- попытавшись
-включить в книгу полный листинг \verb+stm32f4xx.h+\ получил 205 
+включить в книгу полный листинг \verb+stm32f4xx.h+\ получил 205
 страниц листинга \smiley{}
 
-\input{CMSIS/startup}
-\chapter{Стандартная библиотека STM32}
+Поэтому подробнейше описывать все файлы библиотеки, а уж тем более еще и переводить комментарии
+не вижу смысла см.\ref{QA02}.
 
-\section{Установка}
+\chapter{Установка}
 
 Для работы необходимо скачать библиотеки поддержки от ST:
 
@@ -30,5 +30,51 @@ SPL & \keys{S}tandard \keys{P}eripheral \keys{L}ibrary & пакет содержит
 только библиотеки ядра и встроенной в кристалл переферии (таймеры, ЦАП\etc)\\
 \end{tabular}
 
-\input{CMSIS/STM32/stm32f4xx}
-\chapter{USB client/host}
+\chapter{Startup код}
+
+\section{startup\_stm32f10x\_ld\_vl.s}
+\section{startup\_stm32f40xx.s}
+
+\section{system\_stm32f10x.c}
+\section{system\_stm32f4xx.c}
+
+\chapter{CMSIS}
+
+\section{stm32f10x.h}
+
+\section{core\_cm3.h}
+
+\cmsis\ библиотека поддержки ядра \cortex{M3}.
+
+\section{core\_cm4.h}
+
+\cmsis\ библиотека поддержки ядра \cortex{M4}.
+
+\section{core\_cmInstr.h}
+
+\cmsis\ Core Instruction Interface.
+
+\section{core\_cmFunc.h}
+
+\cmsis\ Core Register Access Functions.
+
+\chapter{BSP}
+
+\section{\stmvld}
+
+\subsection{STM32vldiscovery.c}
+
+\section{\stmdisco}
+
+\subsection{STM32f4\_discovery.c}
+
+\chapter{\cortex{M4} расширение SIMD/DSP}
+
+\section{core\_cm4\_simd.h}
+
+
+% \input{CMSIS/startup}
+% \chapter{Стандартная библиотека STM32}
+% 
+% \input{CMSIS/STM32/stm32f4xx}
+% \chapter{USB client/host}

@@ -1,6 +1,6 @@
 \documentclass[oneside,a4paper,12pt,english,russian]{memoir}
 
-%\usepackage[T2A,T1]{fontenc}
+% %\usepackage[T2A,T1]{fontenc}
 \usepackage[cp1251]{inputenc}
 \usepackage{babel}
 \usepackage{indentfirst}
@@ -10,15 +10,15 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{graphicx}
 \usepackage[os=win]{menukeys}
-\usepackage{algorithm,algpseudocode}
-\usepackage{xyling}
+% \usepackage{algorithm,algpseudocode}
+% \usepackage{xyling}
 \usepackage{dirtree}
 \usepackage{amsmath}
 \usepackage{lscape}
 \usepackage{wasysym}
 
 \usepackage{listings}
-\lstloadlanguages{{[ISO]C++},{[gnu]make},Python,bash}
+% \lstloadlanguages{{[ISO]C++},{[gnu]make},Python,bash}
 \lstset{
 	inputencoding=cp1251, extendedchars=true,
 	language={[ISO]C++},
@@ -44,8 +44,8 @@
 	pdfsubject={ru manual on writing programs for ARM-based controllers developed in SSAU ASCL}
 	]{hyperref}
 \newcommand{\email}[2]{#1\ \href{mailto:#2}{<\nolinkurl{#2}>}}
-%\newcommand{\url}[1]{\emph{#1}}
-%\newcommand{\email}[2]{\emph{#1\ <#2>}}
+% \newcommand{\url}[1]{\emph{#1}}
+% %\newcommand{\email}[2]{\emph{#1\ <#2>}}
 
 \newcommand{\cpp}{$C^{+^{+}}$}
 \newcommand{\arm}{ARM}
@@ -58,6 +58,8 @@
 \newcommand{\keil}{Keil\ref{keil}}
 \newcommand{\etc}{,..}
 \newcommand{\wiring}{Wiring\ref{wiring}}
+\newcommand{\git}{Git\ref{git}}
+\newcommand{\github}{github\ref{github}}
 
 \newcommand{\stmvld}{STM32VLDISCOVERY\ref{STM32VLDISCOVERY}}
 \newcommand{\stmdisco}{STM32F4DISCOVERY\ref{STM32F4DISCOVERY}}
@@ -70,10 +72,7 @@
 \tableofcontents
 \lstlistoflistings
 
-\part{Введение}
-%\begin{abstract} 
-\input{intro}
-%\end{abstract}
+\part{Введение}\input{intro}
 
 \part{Железо}\input{hardware/hardware}
 
@@ -136,7 +135,9 @@
 \section{RTC}
 \section{Датчики температуры DS18x20}
 \part{Встраиваемый Linux}\label{linux}
+
 \input{QA/QA}
+
 \part{Приложения}
 \input{hardware/CPU_table}
 

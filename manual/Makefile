@@ -1,7 +1,7 @@
 all: book.pdf
 
 clean:
-	rm -f *.dvi *.log *.toc *.aux *.lol
+	rm -f *.dvi *.log *.toc *.aux *.lol *.out
 	rm -f CMSIS/STM32/*.s CMSIS/STM32/*.c
 
 TEX = book.tex intro.tex \
@@ -13,13 +13,13 @@ TEX = book.tex intro.tex \
 	QA/*.tex \
 	apps/*.tex apps/*.jpg \
 	CMSIS/*.tex \
-		CMSIS/STM32/*.tex CMSIS/STM32/keilstartup.s \
+		CMSIS/STM32/stm32f4xx.tex \
 	adapter\adapters.tex \
 		adapter\jtag\jtag.tex \
 		adapter\stlink\stlink.tex adapter\stlink\install\install.tex \
 	debug\debug.tex \
 	firststep\firststep.tex \
-		firststep\blink\blink.tex firststep\blink\blink.c \
+		firststep\blink\blink.tex firststep\blink\blink.cpp \
 	versioncontrol/vcs.tex \
 		versioncontrol/git.tex \
 		versioncontrol/svn.tex \
@@ -31,11 +31,8 @@ TEX = book.tex intro.tex \
 	Wiring\wiring.tex \
 	Makefile
 	
-firststep\blink\blink.c: ..\src\blink\blink.c utf2win.py
+firststep\blink\blink.cpp: ..\src\blink\blink.cpp utf2win.py
 	\python\python.exe utf2win.py $< $@	
-	
-CMSIS/STM32/keilstartup.s: ../lib/STM32F4/keil_startup_stm32f4xx.s
-	cp $< $@	
 	
 book.pdf: $(TEX)
 	pdflatex -draftmode book.tex
