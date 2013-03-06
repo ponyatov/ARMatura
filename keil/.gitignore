@@ -1,31 +1,5 @@
-ssau.o
-startup_stm32f40xx.o
-system_stm32f4xx.o
-blink.d
-core_cm3.d
-core_cm4.d
-ssau.d
-startup_stm32f10x_ld_vl.d
-startup_stm32f40xx.d
-startup_stm32f4xx.d
-stm32f10x_gpio.d
-stm32f4_discovery.d
-stm32vldiscovery.d
-system_stm32f10x.d
-system_stm32f4xx.d
-blink.crf
-core_cm3.crf
-core_cm4.crf
-ssau.crf
-stm32f10x_gpio.crf
-stm32f4_discovery.crf
-stm32vldiscovery.crf
-system_stm32f10x.crf
-system_stm32f4xx.crf
-stm32vldiscovery.__i
-ARMatura_ARMatura.dep
-ARMatura_Target 1.dep
-STM32F4DISCOVERY_STM32F4DISCOVERY.dep
-STM32F4DISCOVERY_Target 1.dep
-STM32VLDISCOVERY_STM32VLDISCOVERY.dep
-STM32VLDISCOVERY_Target 1.dep
+*.bak
+*.crf
+*.o
+*.d
+*.__i
