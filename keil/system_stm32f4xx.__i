@@ -1,5 +1,0 @@
--c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F4\inc -I..\lib\BSP\STM32F4DISCOVERY 
--I C:\ARM\Keil\ARM\RV31\INC 
--I C:\ARM\Keil\ARM\CMSIS\Include 
--I C:\ARM\Keil\ARM\Inc\ST\STM32F4xx 
--DSTM32F4DISCOVERY -DSTM32F40XX -o "system_stm32f4xx.o" --omf_browse "system_stm32f4xx.crf" --depend "system_stm32f4xx.d" "..\lib\STM32F4\src\system_stm32f4xx.c"
