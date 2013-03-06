@@ -1,46 +1,0 @@
-Dependencies for Project 'STM32VLDISCOVERY', Target 'STM32VLDISCOVERY': (DO NOT MODIFY !)
-F (.\..\lib\STM32F10x\src\system_stm32f10x.c)(0x4D7874F0)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I..\lib\BSP\STM32VLDISCOVERY -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "system_stm32f10x.o" --omf_browse "system_stm32f10x.crf" --depend "system_stm32f10x.d")
-I (..\lib\STM32F10x\inc\stm32f10x.h)(0x4D7874F4)
-I (..\lib\CMSIS\inc\core_cm3.h)(0x50CF24AE)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (..\lib\CMSIS\inc\core_cmInstr.h)(0x50CF24AE)
-I (..\lib\CMSIS\inc\core_cmFunc.h)(0x50CF24AE)
-I (..\lib\STM32F10x\inc\system_stm32f10x.h)(0x4D7874EA)
-F (.\..\lib\STM32F10x\startup\keil\startup_stm32f10x_ld_vl.s)(0x4D787516)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I..\lib\BSP\STM32VLDISCOVERY -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x --pd "STM32VLDISCOVERY SETA 1" --pd "STM32F10X_LD_VL SETA 1" --list ".\startup_stm32f10x_ld_vl.lst" --xref -o "startup_stm32f10x_ld_vl.o" --depend "startup_stm32f10x_ld_vl.d")
-F (.\..\lib\STM32F10x\src\stm32f10x_gpio.c)(0x51362F3C)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I..\lib\BSP\STM32VLDISCOVERY -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "stm32f10x_gpio.o" --omf_browse "stm32f10x_gpio.crf" --depend "stm32f10x_gpio.d")
-I (..\lib\STM32F10x\inc\stm32f10x_gpio.h)(0x51362F3C)
-I (..\lib\STM32F10x\inc\stm32f10x.h)(0x4D7874F4)
-I (..\lib\CMSIS\inc\core_cm3.h)(0x50CF24AE)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (..\lib\CMSIS\inc\core_cmInstr.h)(0x50CF24AE)
-I (..\lib\CMSIS\inc\core_cmFunc.h)(0x50CF24AE)
-I (..\lib\STM32F10x\inc\system_stm32f10x.h)(0x4D7874EA)
-I (..\lib\STM32F10x\inc\stm32f10x_rcc.h)(0x51362F3C)
-F (.\..\src\blink\blink.cpp)(0x51364FA3)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I..\lib\BSP\STM32VLDISCOVERY -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "blink.o" --omf_browse "blink.crf" --depend "blink.d")
-I (..\inc\SSAU.h)(0x51365985)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (..\lib\STM32F10x\inc\STM32vldiscovery.h)(0x51362F3B)
-I (..\lib\STM32F10x\inc\STM32f10x.h)(0x4D7874F4)
-I (..\lib\CMSIS\inc\core_cm3.h)(0x50CF24AE)
-I (..\lib\CMSIS\inc\core_cmInstr.h)(0x50CF24AE)
-I (..\lib\CMSIS\inc\core_cmFunc.h)(0x50CF24AE)
-I (..\lib\STM32F10x\inc\system_stm32f10x.h)(0x4D7874EA)
-I (..\lib\STM32F10x\inc\stm32f10x_gpio.h)(0x51362F3C)
-F (.\..\src\SSAU.cpp)(0x51362F3E)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I..\lib\BSP\STM32VLDISCOVERY -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "ssau.o" --omf_browse "ssau.crf" --depend "ssau.d")
-I (..\inc\SSAU.h)(0x51365985)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (..\lib\STM32F10x\inc\STM32vldiscovery.h)(0x51362F3B)
-I (..\lib\STM32F10x\inc\STM32f10x.h)(0x4D7874F4)
-I (..\lib\CMSIS\inc\core_cm3.h)(0x50CF24AE)
-I (..\lib\CMSIS\inc\core_cmInstr.h)(0x50CF24AE)
-I (..\lib\CMSIS\inc\core_cmFunc.h)(0x50CF24AE)
-I (..\lib\STM32F10x\inc\system_stm32f10x.h)(0x4D7874EA)
-I (..\lib\STM32F10x\inc\stm32f10x_gpio.h)(0x51362F3C)
-F (.\..\lib\BSP\STM32VLDISCOVERY\STM32vldiscovery.c)(0x4C8F6112)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM32F10x\inc -I..\lib\BSP\STM32VLDISCOVERY -I C:\ARM\Keil\ARM\RV31\INC -I C:\ARM\Keil\ARM\CMSIS\Include -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x -DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "stm32vldiscovery.o" --omf_browse "stm32vldiscovery.crf" --depend "stm32vldiscovery.d")
-I (..\lib\BSP\STM32VLDISCOVERY\STM32vldiscovery.h)(0x4C8F614E)
-I (..\lib\STM32F10x\inc\STM32f10x.h)(0x4D7874F4)
-I (..\lib\CMSIS\inc\core_cm3.h)(0x50CF24AE)
-I (C:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F99990)
-I (..\lib\CMSIS\inc\core_cmInstr.h)(0x50CF24AE)
-I (..\lib\CMSIS\inc\core_cmFunc.h)(0x50CF24AE)
-I (..\lib\STM32F10x\inc\system_stm32f10x.h)(0x4D7874EA)
