@@ -8,6 +8,42 @@
 Поэтому подробнейше описывать все файлы библиотеки, а уж тем более еще и переводить комментарии
 не вижу смысла см.\ref{QA02}.
 
+\bigskip
+\href{http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php}{\cmsis\ --- Cortex Microcontroller Software Interface Standard}
+\bigskip
+
+The ARM Cortex Microcontroller Software Interface Standard --- независимый от производителя
+HAL (hardware abstraction layer) для серии процессоров \cortex{M}. \cmsis\ обеспечивает 
+единообразный и простой программный интерфейс к процессору и его периферии, упрощает
+повторное использование готового кода, уменьшает усилия по изучению новых микроконтроллеров
+и уменьшает время запуска на рынок для новых устройств.
+
+Создание ПО является основным фактором затрат в индустрии встраиваемых устройств.
+Стандартизация программных интерфейсов среди всех поставщиков чипов с ядром \cortex{M},
+особенно при создании новых проектов или миграции существующего ПО на новый процессор,
+приводит к значительному уменьшению стоимости.
+
+\bigskip
+\cmsis\ состоит изследуюбщих компонент: 
+
+\begin{itemize}
+\item CMSIS-CORE: предоставляет интерфейс к ядрам процессоров \cortex{M0}, \cortex{M3}, 
+\cortex{M4}, SC000, and SC300 и регистрам периферии
+\item CMSIS-DSP: библиотека функций ЦОС содержит более 60 функций 
+реализованных для чисел с фиксированной точкой 
+(дробные q7, q15, q31) и с плавающей точкой одинарной точности (32 бита)
+\item CMSIS-RTOS API: стандартизованный программный интерфейс
+для ОСРВ для управления нитями, ресурсами, и управления временем
+\item CMSIS-SVD: файлы System View Description XML, содержащие
+полное представление с точки зрения программиста
+всей микрокроконтроллерной системы включая периферию  
+\end{itemize}
+
+Стандарт полностью масштабируем, и применим для всех микропроцессоров серии \cortex{M},
+в диапазоне от самых маленьких с 8K флеша до кристаллов с богатой коммуникационной периферией
+типа Ethernet и USB. (Требования к памяти со стороны CMSIS-CORE: менее 1K кода, менее 
+10 байт ОЗУ).
+
 \chapter{Установка}
 
 Для работы необходимо скачать библиотеки поддержки от ST:
@@ -19,6 +55,7 @@ BSP&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet
 SPL&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32054.zip}{STSW-STM32054}&STM32F10x standard peripheral library\\
 BSP&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stsw-stm32068.zip}{STSW-STM32068}&\stmdisco\ board firmware package\\
 SPL&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stm32f4_dsp_stdperiph_lib.zip}{STSW-STM32065}&STM32F4 DSP and standard peripherals library\\
+USB&\href{http://www.st.com/st-web-ui/static/active/en/st_prod_software_internet/resource/technical/software/firmware/stm32_f105-07_f2_f4_usb-host-device_lib.zip}{STSW-STM32046}&STM32F105/7, STM32F2 and STM32F4 USB on-the-go \\&&Host and device library\\
 \end{tabular}
 
 \bigskip
