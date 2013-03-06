@@ -1,5 +1,5 @@
 STM32F4DISCOVERY_fabric_firmware.rar
-stm32f4_dsp_stdperiph_lib.zip
-stsw-stm32054.zip
-stsw-stm32068.zip
-stsw-stm32078.zip
+STSW-STM32065_stm32f4_dsp_stdperiph_lib.zip
+STSW-STM32068_f4d.zip
+STSW-STM32054_f10x.zip
+STSW-STM32078_vld.zip
