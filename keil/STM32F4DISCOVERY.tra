@@ -13,7 +13,7 @@
 ### ADS-LD Output File: 'STM32F4DISCOVERY.axf'
 ### ADS-LD Command File: 'STM32F4DISCOVERY.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'STM32F4DISCOVERY.lnp', Handle=0x000006D0
+### Creating CmdFile 'STM32F4DISCOVERY.lnp', Handle=0x00000490
 ### Writing '.lnp' file
 ### ADS-LD Command file 'STM32F4DISCOVERY.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
