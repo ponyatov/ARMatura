@@ -405,6 +405,13 @@
         </Group>
         <Group>
           <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32f4xx_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lib\STM32F4\src\stm32f4xx_gpio.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>src</GroupName>
@@ -428,6 +435,13 @@
         </Group>
         <Group>
           <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32f4_discovery.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lib\BSP\STM32F4DISCOVERY\stm32f4_discovery.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
