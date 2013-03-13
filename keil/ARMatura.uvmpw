@@ -13,8 +13,11 @@
 
   <project>
     <PathAndName>.\STM32F4DISCOVERY.uvproj</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\STM32F103EMU.uvproj</PathAndName>
     <NodeIsActive>1</NodeIsActive>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
 </ProjectWorkspace>
