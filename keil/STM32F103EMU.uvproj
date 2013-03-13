@@ -350,7 +350,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -366,7 +366,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
@@ -410,6 +410,26 @@
               <FileName>stm32f103emu_main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\stm32f103emu_main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32f10x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lib\STM32F10x\src\stm32f10x_gpio.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SSAU</GroupName>
+          <Files>
+            <File>
+              <FileName>SSAU.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\src\SSAU.cpp</FilePath>
             </File>
           </Files>
         </Group>
