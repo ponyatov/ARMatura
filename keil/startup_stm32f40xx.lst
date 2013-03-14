@@ -871,8 +871,9 @@ Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=start
 up_stm32f40xx.d -ostartup_stm32f40xx.o -I..\inc -I..\lib\CMSIS\inc -I..\lib\STM
 32F4\inc -I..\lib\BSP\STM32F4DISCOVERY -IC:\ARM\Keil\ARM\RV31\INC -IC:\ARM\Keil
 \ARM\CMSIS\Include -IC:\ARM\Keil\ARM\Inc\ST\STM32F4xx --predefine="__EVAL SETA 
-1" --predefine="STM32F4DISCOVERY SETA 1" --predefine="STM32F40XX SETA 1" --list
-=.\startup_stm32f40xx.lst ..\lib\STM32F4\startup\keil\startup_stm32f40xx.s
+1" --predefine="STM32F4DISCOVERY SETA 1" --predefine="STM32F40XX SETA 1" --pred
+efine="USE_STDPERIPH_DRIVER SETA 1" --list=.\startup_stm32f40xx.lst ..\lib\STM3
+2F4\startup\keil\startup_stm32f40xx.s
 
 
 
@@ -1985,4 +1986,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-449 symbols in table
+450 symbols in table

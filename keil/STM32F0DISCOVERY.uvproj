@@ -348,7 +348,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F0DISCOVERY,STM32F0XX</Define>
+              <Define>STM32F0DISCOVERY,STM32F0XX,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F0\inc;..\lib\BSP\STM32F0DISCOVERY</IncludePath>
             </VariousControls>
@@ -364,7 +364,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F0DISCOVERY,STM32F0XX</Define>
+              <Define>STM32F0DISCOVERY,STM32F0XX,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F0\inc;..\lib\BSP\STM32F0DISCOVERY</IncludePath>
             </VariousControls>
@@ -435,6 +435,18 @@
         </Group>
         <Group>
           <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32f0xx_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\..\lib\STM32F0\src\stm32f0xx_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f0xx_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lib\STM32F0\src\stm32f0xx_rcc.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

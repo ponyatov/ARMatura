@@ -348,7 +348,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F4DISCOVERY,STM32F40XX</Define>
+              <Define>STM32F4DISCOVERY,STM32F40XX,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F4\inc;..\lib\BSP\STM32F4DISCOVERY</IncludePath>
             </VariousControls>
@@ -364,7 +364,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F4DISCOVERY,STM32F40XX</Define>
+              <Define>STM32F4DISCOVERY,STM32F40XX,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F4\inc;..\lib\BSP\STM32F4DISCOVERY</IncludePath>
             </VariousControls>
@@ -410,6 +410,11 @@
               <FileName>stm32f4xx_gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\lib\STM32F4\src\stm32f4xx_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lib\STM32F4\src\stm32f4xx_rcc.c</FilePath>
             </File>
           </Files>
         </Group>

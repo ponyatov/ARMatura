@@ -188,8 +188,8 @@ void STM_EVAL_LEDToggle(Led_TypeDef Led)
 void STM_EVAL_PBInit(Button_TypeDef Button, ButtonMode_TypeDef Button_Mode)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
-  EXTI_InitTypeDef EXTI_InitStructure;
-  NVIC_InitTypeDef NVIC_InitStructure;
+//dim@  EXTI_InitTypeDef EXTI_InitStructure;
+//dim@  NVIC_InitTypeDef NVIC_InitStructure;
 
   /* Enable the BUTTON Clock */
   RCC_AHB1PeriphClockCmd(BUTTON_CLK[Button], ENABLE);
@@ -201,26 +201,26 @@ void STM_EVAL_PBInit(Button_TypeDef Button, ButtonMode_TypeDef Button_Mode)
   GPIO_InitStructure.GPIO_Pin = BUTTON_PIN[Button];
   GPIO_Init(BUTTON_PORT[Button], &GPIO_InitStructure);
 
-  if (Button_Mode == BUTTON_MODE_EXTI)
-  {
-    /* Connect Button EXTI Line to Button GPIO Pin */
-    SYSCFG_EXTILineConfig(BUTTON_PORT_SOURCE[Button], BUTTON_PIN_SOURCE[Button]);
+//dim@  if (Button_Mode == BUTTON_MODE_EXTI)
+//dim@  {
+//dim@    /* Connect Button EXTI Line to Button GPIO Pin */
+//dim@    SYSCFG_EXTILineConfig(BUTTON_PORT_SOURCE[Button], BUTTON_PIN_SOURCE[Button]);
 
-    /* Configure Button EXTI line */
-    EXTI_InitStructure.EXTI_Line = BUTTON_EXTI_LINE[Button];
-    EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;  
-    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-    EXTI_Init(&EXTI_InitStructure);
+//dim@    /* Configure Button EXTI line */
+//dim@    EXTI_InitStructure.EXTI_Line = BUTTON_EXTI_LINE[Button];
+//dim@    EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+//dim@    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;  
+//dim@    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+//dim@    EXTI_Init(&EXTI_InitStructure);
 
-    /* Enable and set Button EXTI Interrupt to the lowest priority */
-    NVIC_InitStructure.NVIC_IRQChannel = BUTTON_IRQn[Button];
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0F;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x0F;
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+//dim@    /* Enable and set Button EXTI Interrupt to the lowest priority */
+//dim@    NVIC_InitStructure.NVIC_IRQChannel = BUTTON_IRQn[Button];
+//dim@    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0F;
+//dim@    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x0F;
+//dim@    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 
-    NVIC_Init(&NVIC_InitStructure); 
-  }
+//dim@    NVIC_Init(&NVIC_InitStructure); 
+//dim@  }
 }
 
 /**

@@ -348,7 +348,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL</Define>
+              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc;..\lib\BSP\STM32VLDISCOVERY</IncludePath>
             </VariousControls>
@@ -364,7 +364,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL</Define>
+              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc;..\lib\BSP\STM32VLDISCOVERY</IncludePath>
             </VariousControls>

@@ -2,4 +2,4 @@
 -I C:\ARM\Keil\ARM\RV31\INC 
 -I C:\ARM\Keil\ARM\CMSIS\Include 
 -I C:\ARM\Keil\ARM\Inc\ST\STM32F10x 
--DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -o "stm32vldiscovery.o" --omf_browse "stm32vldiscovery.crf" --depend "stm32vldiscovery.d" "..\lib\BSP\STM32VLDISCOVERY\STM32vldiscovery.c"
+-DSTM32VLDISCOVERY -DSTM32F10X_LD_VL -DUSE_STDPERIPH_DRIVER -o "stm32vldiscovery.o" --omf_browse "stm32vldiscovery.crf" --depend "stm32vldiscovery.d" "..\lib\BSP\STM32VLDISCOVERY\STM32vldiscovery.c"
