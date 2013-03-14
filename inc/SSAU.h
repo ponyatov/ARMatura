@@ -9,6 +9,13 @@
 
 #include <stdint.h>
 
+#ifdef STM32F0DISCOVERY
+  #ifndef STM32F0XX
+		#define STM32F0XX
+	#endif
+	#include "stm32f0_discovery.h"
+#endif // STM32F0DISCOVERY
+
 #ifdef STM32VLDISCOVERY
 	#ifndef STM32F10X_LD_VL
 		#define STM32F10X_LD_VL
