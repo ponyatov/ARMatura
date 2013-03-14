@@ -8,6 +8,7 @@
 \label{STM32F407VGT}
 \label{STM32F407IGT}
 \label{STM32F417IGT}
+\label{STM32F051R8T}
 
 \menu{STM32F>core>crypto>model>pins>flash>package>n}
 \bigskip
@@ -15,6 +16,7 @@
 \menu{core}
 
 \begin{tabular}{l l l}
+0 & \cortex{M0} \\
 1 & \cortex{M3} \\
 3 & \cortex{M4} \\
 4 & \cortex{M4F} & с расширениями FPU (плавающая точка) и SIMD\\ 
@@ -28,12 +30,14 @@
 1 & &Crypto расширение с функционалом вычислений MD5, SHA,.. \\
 2 & \cortex{M4}& CRC \\
 3 & &Crypto\\
+5 & &\\
 \end{tabular}
 
 \menu{model}
 
 \begin{tabular}{l l}
 0 & \\
+1 & \\
 3 & включена поддержка CAN, USB, SDIO \\
 7 & \\
 \end{tabular}
@@ -81,6 +85,8 @@ STM32F407VGT   & M4F       & 168 &   1M  & 192K & 144    &      &       \\
 STM32F407IGT   & M4F       & 168 &   1M  & 192K & 176    &      &       \\
 \hline
 STM32F427IIT   & M4F       & 168 &   2M  & 256K & 176    &      &       \\
+\hline
+STM32F051R8T   & M0        &  48 &  64K  &   8K &  64    & 55   &       \\
 \end{tabular}
 
 \bigskip
@@ -101,6 +107,8 @@ STM32F407VGT   &         2 & 2         & 6    &     &     &              &     \
 STM32F407IGT   &         2 & 2         & 6    &     &     &              &     \\
 \hline
 STM32F427IIT   &         2 & 2         & 8    &     &     &              &     \\
+\hline
+STM32F051R8T   &           &           &      &     &     & 2x12b (19ch) &     \\
 \end{tabular}
 
 \bigskip
@@ -122,5 +130,8 @@ STM32F407VGT   &           &        &     &     & $\bullet$ & $\bullet$ \\
 STM32F407IGT   &           &        &     &     & $\bullet$ & $\bullet$ \\
 \hline
 STM32F427IIT   &           &        &     &     & $\bullet$ & $\bullet$ \\
+\hline
+STM32F051R8T   & 7x16b     & 7x16b  &     & 2   & $\bullet$ & $\bullet$ \\
+               & 1x32b     & 1x32b  &     &     &           &           \\
 \end{tabular}
 
