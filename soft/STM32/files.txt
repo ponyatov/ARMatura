@@ -4,3 +4,5 @@ STSW-STM32068_f4d.zip
 STSW-STM32054_f10x.zip
 STSW-STM32078_vld.zip
 STSW-STM32046_usb.zip
+STSW-STM32049_stm32f0discovery_fw.zip
+STSW-STM32048_stm32f0_stdperiph_lib.zip
