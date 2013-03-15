@@ -21,6 +21,7 @@
 	#ifndef STM32F10X_LD_VL
 		#define STM32F10X_LD_VL
 	#endif
+	#include <stm32f10x.h>
 	#include <STM32vldiscovery.h>
 #endif // STM32VLDISCOVERY
 
