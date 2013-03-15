@@ -1,0 +1,11 @@
+refman\
+	stm32_russian.pdf
+	RM0008_stm32f10x.pdf
+	RM0041_stm32f100.pdf
+STM-STUDIO.pdf
+STM32 F4 series - High-performance Cortex-M4 MCU.pdf
+STM32F4-Technical-Training.pdf
+UM0462 Flash loader demonstrator.pdf
+UM0551 USB HID demonstrator.pdf
+files.txt
+stm32f4xx_dsp_stdperiph_lib_um.chm
