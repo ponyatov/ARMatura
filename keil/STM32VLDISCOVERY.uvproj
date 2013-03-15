@@ -129,7 +129,7 @@
           </Simulator>
           <Target>
             <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
             <RunToMain>0</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
             <RestoreWatchpoints>1</RestoreWatchpoints>
@@ -152,7 +152,7 @@
             <CpuDllArguments></CpuDllArguments>
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
+            <InitializationFile>..\lib\BSP\STM32VLDISCOVERY\Dbg_RAM.ini</InitializationFile>
             <Driver>STLink\ST-LINKIII-KEIL_SWO.dll</Driver>
           </TargetDlls>
         </DebugOption>
@@ -161,12 +161,12 @@
             <UseTargetDll>1</UseTargetDll>
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
-            <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
+            <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
             <DriverSelection>4104</DriverSelection>
           </Flash1>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
         </Utilities>
         <TargetArmAds>
@@ -296,8 +296,8 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x8000000</StartAddress>
-                <Size>0x20000</Size>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x1000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -321,8 +321,8 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x20000000</StartAddress>
-                <Size>0x2000</Size>
+                <StartAddress>0x20001000</StartAddress>
+                <Size>0x1000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -348,7 +348,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL,USE_STDPERIPH_DRIVER</Define>
+              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL,USE_STDPERIPH_DRIVER,VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc;..\lib\BSP\STM32VLDISCOVERY</IncludePath>
             </VariousControls>
@@ -364,7 +364,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL,USE_STDPERIPH_DRIVER</Define>
+              <Define>STM32VLDISCOVERY,STM32F10X_LD_VL,USE_STDPERIPH_DRIVER,VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F10x\inc;..\lib\BSP\STM32VLDISCOVERY</IncludePath>
             </VariousControls>
@@ -378,7 +378,7 @@
             <useFile>0</useFile>
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>..\bin\STM32VLDISCOVERY.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
