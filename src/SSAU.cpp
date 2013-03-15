@@ -21,7 +21,7 @@ int main() // classical Wiring main()
 //		SysTick_Config(RCC_Clocks.HCLK_Frequency / 1000);
   
 	// applet init
-	init();
+	setup();
 	// applet mainloop
 	for(;;) loop();
 //	return 0;

@@ -9,6 +9,11 @@
 
 #include <stdint.h>
 
+#include <WConstants.h>
+
+class xLED{
+};
+
 #ifdef STM32EMU103
 	#ifndef STM32F10X_MD
 		#define STM32F10X_MD
@@ -59,10 +64,13 @@
 	#define STM_LEDoff(X)   STM_EVAL_LEDOff(X)
 	#define STM_LEDon(X)    STM_EVAL_LEDOn(X)
 	#define STM_PBget(X)		STM_EVAL_PBGetState(X)
+	
+	extern xLED LD3;//,LD4,LD5,LD6;
+	#define WLED LD3
 #endif // STM32F4DISCOVERY
 
 // classical Wiring interface functions for user applet
-void init(void);
+void setup(void);
 void loop(void);
 
 // interrupt handlers
