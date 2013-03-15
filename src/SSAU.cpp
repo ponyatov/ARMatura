@@ -6,16 +6,6 @@
 
 #include <SSAU.h>
 
-/*
-uint32_t volatile SystemTimer=0;
-void SysTick_Handler(void)
-{
-	SystemTimer++;
-}
-*/
-
-
-
 int main() // classical Wiring main()
 {
 	// board init
