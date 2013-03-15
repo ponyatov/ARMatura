@@ -16,30 +16,27 @@
 ||
 */
 
-//*** <<< Use Configuration Wizard in Context Menu >>> ***
-
-// <h> Wiring Constants
-
 #ifndef WCONSTANTS_H
 #define WCONSTANTS_H
 
 // Wiring API version for libraries
 // this is passed in at compile-time
 #ifndef WIRING
-// <o> Wiring API version <100=> 100
 #define WIRING 100
+#endif
+
+// passed in at compile-time
+#ifndef F_CPU
+//#define F_CPU 16000000L
+//#error "F_CPU was not defined."
 #endif
 
 //#define INPUT    0x0
 //#define OUTPUT   0x1
-//#define OUTPUT   0xFF
+////#define OUTPUT   0xFF
 enum xIOMODE {
-	INPUT,
-	OUTPUT
+	INPUT=0,
+	OUTPUT=1
 };
 
-
-#endif
-// WCONSTANTS_H
-
-// </h>
+#endif // WCONSTANTS_H

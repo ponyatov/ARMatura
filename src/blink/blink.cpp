@@ -6,16 +6,16 @@
 #include <SSAU.h> // используем Wiring-совместимую объектную библиотеку SSAU ASCL
 
 void setup() {
-//	STM_LEDoff(LED3);
-//	STM_LEDoff(LED4);
-	pinMode(WLED, OUTPUT);  // set pin as output
+	STM_LEDoff(LED3);
+	STM_LEDoff(LED4);
+//	pinMode(WLED, OUTPUT);  // set pin as output
 }
 
-void loop() {
+void loop() { 
 	if (STM_PBget(BUTTON_USER)== SET) {
-		STM_LEDon(LED4);
+		STM_LEDon(LED3);
 	} else {
-		STM_LEDoff(LED4);
+		STM_LEDoff(LED3);
 	}
 //  digitalWrite(WLED, HIGH);  // set the LED on
 //  delay(1000);               // wait for a second
