@@ -6,6 +6,8 @@
 
 #include <SSAU.h>
 
+void pinMode
+
 int main() // classical Wiring main()
 {
 	// board init

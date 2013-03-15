@@ -11,8 +11,13 @@
 
 #include <WConstants.h>
 
+class xPIN {
+};
+
 class xLED{
 };
+
+void pinMode(xPIN,xIOMODE);
 
 #ifdef STM32EMU103
 	#ifndef STM32F10X_MD
