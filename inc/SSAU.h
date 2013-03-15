@@ -15,9 +15,11 @@
 	#endif
 	#include <stm32f0xx.h>
 	#include <stm32f0_discovery.h>
-	#define STM_LEDinit(X) STM_EVAL_LEDInit(X)
+	#define STM_LEDinit(X)  STM_EVAL_LEDInit(X)
 	#define STM_PBinit(X,Y) STM_EVAL_PBInit(X,Y)
-	//STM_EVAL_PBGetState
+	#define STM_LEDoff(X)   STM_EVAL_LEDOff(X)
+	#define STM_LEDon(X)    STM_EVAL_LEDOn(X)
+	#define STM_PBget(X)		STM_EVAL_PBGetState(X)
 #endif // STM32F0DISCOVERY
 
 #ifdef STM32VLDISCOVERY
@@ -38,6 +40,11 @@
 	#endif
 	#include <stm32f4xx.h>
 	#include <stm32f4_discovery.h>
+	#define STM_LEDinit(X)  STM_EVAL_LEDInit(X)
+	#define STM_PBinit(X,Y) STM_EVAL_PBInit(X,Y)
+	#define STM_LEDoff(X)   STM_EVAL_LEDOff(X)
+	#define STM_LEDon(X)    STM_EVAL_LEDOn(X)
+	#define STM_PBget(X)		STM_EVAL_PBGetState(X)
 #endif // STM32F4DISCOVERY
 
 // classical Wiring interface functions for user applet
