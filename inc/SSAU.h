@@ -18,6 +18,7 @@ class xLED{
 };
 
 void pinMode(xPIN,xIOMODE);
+void pinMode(xLED,xIOMODE);
 
 #ifdef STM32EMU103
 	#ifndef STM32F10X_MD
@@ -56,6 +57,8 @@ void pinMode(xPIN,xIOMODE);
 	#define STM_LEDoff(X)   STM32vldiscovery_LEDOff(X)
 	#define STM_LEDon(X)    STM32vldiscovery_LEDOn(X)
 	#define STM_PBget(X)		STM32vldiscovery_PBGetState(X)
+	extern xLED LD3,LD4;
+	#define WLED LD3
 #endif // STM32VLDISCOVERY
 
 #ifdef STM32F4DISCOVERY 
