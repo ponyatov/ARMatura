@@ -6,6 +6,12 @@
 
 #include <SSAU.h>
 
+void SysTick_Handler(void)
+{
+	tick();
+}
+
+
 int main() // classical Wiring main()
 {
 	// board init
@@ -15,10 +21,10 @@ int main() // classical Wiring main()
 	/* Initialize User_Button on Discovery boards */
 	STM_PBinit(BUTTON_USER, BUTTON_MODE_GPIO);
 	
-//		/* SysTick end of count event each 1ms */
-//		RCC_ClocksTypeDef RCC_Clocks;
-//		RCC_GetClocksFreq(&RCC_Clocks);
-//		SysTick_Config(RCC_Clocks.HCLK_Frequency / 1000);
+	/* SysTick end of count event each 1ms */
+	RCC_ClocksTypeDef RCC_Clocks;
+	RCC_GetClocksFreq(&RCC_Clocks);
+	SysTick_Config(RCC_Clocks.HCLK_Frequency / 1000000UL );
   
 	// applet init
 	setup();

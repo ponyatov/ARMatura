@@ -1,14 +1,14 @@
 /**
   ******************************************************************************
-  * @file    Demo/src/stm32f10x_it.c 
+  * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_it.c 
   * @author  MCD Application Team
-  * @version V1.0.0
-  * @date    09/13/2010
+  * @version V3.5.0
+  * @date    08-April-2011
   * @brief   Main Interrupt Service Routines.
-  *          This file provides template for all exceptions handler and peripherals
-  *          interrupt service routine.
+  *          This file provides template for all exceptions handler and 
+  *          peripherals interrupt service routine.
   ******************************************************************************
-  * @copy
+  * @attention
   *
   * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
   * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
@@ -17,13 +17,14 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
-  * <h2><center>&copy; COPYRIGHT 2010 STMicroelectronics</center></h2>
-  */ 
+  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
+  ******************************************************************************
+  */
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
-void TimingDelay_Decrement(void);
-/** @addtogroup Demo
+
+/** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
 
@@ -118,7 +119,7 @@ void DebugMon_Handler(void)
 }
 
 /**
-  * @brief  This function handles PendSV_Handler exception.
+  * @brief  This function handles PendSVC exception.
   * @param  None
   * @retval None
   */
@@ -131,10 +132,9 @@ void PendSV_Handler(void)
   * @param  None
   * @retval None
   */
-void SysTick_Handler(void)
-{
-  TimingDelay_Decrement();
-}
+//void SysTick_Handler(void)
+//{
+//}
 
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
@@ -152,9 +152,9 @@ void SysTick_Handler(void)
 {
 }*/
 
-
 /**
   * @}
   */ 
 
-/******************* (C) COPYRIGHT 2010 STMicroelectronics *****END OF FILE****/
+
+/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

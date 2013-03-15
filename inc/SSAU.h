@@ -3,22 +3,44 @@
  * (used UTF8 encoding for russian comments)
  * includes Wiring-compatibility layer for Arduino boards usage
  * */
+// <<< Use Configuration Wizard in Context Menu >>>  
  
 #ifndef __SSAU_
 #define __SSAU_
 
 #include <stdint.h>
 
+// <h> Clock
+
+// <o> External Quartz Freq <8000000UL=> 8 MHz <16000000UL=> 16 MHz
+#define HSE_VALUE ((uint32_t)8000000UL)
+#define F_CPU HSE_VALUE
+
+// <o> Internal RC generator <8000000UL=> 8 MHz
+#define HSI_VALUE ((uint32_t)8000000UL)
+
+// <s> Clock Source 
+#define CLOCK_SOURCE "HSE_VALUE"
+
+// </h>
+
+// <h> Wiring library
+
+// <o> version <100=> 1.0.0
+#define WIRING 100
+
+// </h>
+
 #include <WConstants.h>
 
-class xPIN {
+class PIN {
 };
 
-class xLED{
+class LED {
 };
 
-void pinMode(xPIN,xIOMODE);
-void pinMode(xLED,xIOMODE);
+//void pinMode(PIN,xIOMODE);
+//void pinMode(LED,xIOMODE);
 
 #ifdef STM32EMU103
 	#ifndef STM32F10X_MD
@@ -52,12 +74,14 @@ void pinMode(xLED,xIOMODE);
 	#endif
 	#include <stm32f10x.h>
 	#include <STM32vldiscovery.h>
-	#define STM_LEDinit(X)  STM32vldiscovery_LEDInit(X)
-	#define STM_PBinit(X,Y) STM32vldiscovery_PBInit(X,Y)
-	#define STM_LEDoff(X)   STM32vldiscovery_LEDOff(X)
-	#define STM_LEDon(X)    STM32vldiscovery_LEDOn(X)
-	#define STM_PBget(X)		STM32vldiscovery_PBGetState(X)
-	extern xLED LD3,LD4;
+	#include "stm32f10x_it.h"
+	#define STM_LEDinit(X)  	STM32vldiscovery_LEDInit(X)
+	#define STM_PBinit(X,Y) 	STM32vldiscovery_PBInit(X,Y)
+	#define STM_LEDoff(X)   	STM32vldiscovery_LEDOff(X)
+	#define STM_LEDon(X)    	STM32vldiscovery_LEDOn(X)
+	#define STM_LEDtoggle(X)	STM32vldiscovery_LEDToggle(X)
+	#define STM_PBget(X)			STM32vldiscovery_PBGetState(X)
+	extern LED LD3,LD4;
 	#define WLED LD3
 #endif // STM32VLDISCOVERY
 
@@ -80,21 +104,7 @@ void pinMode(xLED,xIOMODE);
 // classical Wiring interface functions for user applet
 void setup(void);
 void loop(void);
-
-// interrupt handlers
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
-
-// Wiring realization
-
-class LED {
-};
+// extra functions for user applet
+void tick(void);	// runs on every systick
 
 #endif // __SSAU_

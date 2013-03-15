@@ -28,7 +28,7 @@
 // passed in at compile-time
 #ifndef F_CPU
 //#define F_CPU 16000000L
-//#error "F_CPU was not defined."
+#error "F_CPU was not defined."
 #endif
 
 //#define INPUT    0x0

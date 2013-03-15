@@ -5,6 +5,10 @@
 
 #include <SSAU.h> // используем Wiring-совместимую объектную библиотеку SSAU ASCL
 
+void tick() {
+	STM_LEDtoggle(LED4);
+}
+
 void setup() {
 	STM_LEDoff(LED3);
 	STM_LEDoff(LED4);
