@@ -448,6 +448,16 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>config</GroupName>
+          <Files>
+            <File>
+              <FileName>SSAU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\..\inc\SSAU.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>
