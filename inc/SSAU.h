@@ -9,6 +9,19 @@
 
 #include <stdint.h>
 
+#ifdef STM32EMU103
+	#ifndef STM32F10X_MD
+		#define STM32F10X_MD
+	#endif
+	#include <stm32f10x.h>
+	#include <stm32emu103.h>
+	#define STM_LEDinit(X)  STM32emu103_LEDInit(X)
+	#define STM_PBinit(X,Y) STM32emu103_PBInit(X,Y)
+	#define STM_LEDoff(X)   STM32emu103_LEDOff(X)
+	#define STM_LEDon(X)    STM32emu103_LEDOn(X)
+	#define STM_PBget(X)		STM32emu103_PBGetState(X)
+#endif // STM32EMU103
+
 #ifdef STM32F0DISCOVERY
   #ifndef STM32F0XX
 		#define STM32F0XX
@@ -26,6 +39,7 @@
 	#ifndef STM32F10X_LD_VL
 		#define STM32F10X_LD_VL
 	#endif
+	#include <stm32f10x.h>
 	#include <STM32vldiscovery.h>
 	#define STM_LEDinit(X)  STM32vldiscovery_LEDInit(X)
 	#define STM_PBinit(X,Y) STM32vldiscovery_PBInit(X,Y)
