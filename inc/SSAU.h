@@ -15,6 +15,9 @@
 	#endif
 	#include <stm32f0xx.h>
 	#include <stm32f0_discovery.h>
+	#define STM_LEDinit(X) STM_EVAL_LEDInit(X)
+	#define STM_PBinit(X,Y) STM_EVAL_PBInit(X,Y)
+	//STM_EVAL_PBGetState
 #endif // STM32F0DISCOVERY
 
 #ifdef STM32VLDISCOVERY
@@ -22,6 +25,11 @@
 		#define STM32F10X_LD_VL
 	#endif
 	#include <STM32vldiscovery.h>
+	#define STM_LEDinit(X)  STM32vldiscovery_LEDInit(X)
+	#define STM_PBinit(X,Y) STM32vldiscovery_PBInit(X,Y)
+	#define STM_LEDoff(X)   STM32vldiscovery_LEDOff(X)
+	#define STM_LEDon(X)    STM32vldiscovery_LEDOn(X)
+	#define STM_PBget(X)		STM32vldiscovery_PBGetState(X)
 #endif // STM32VLDISCOVERY
 
 #ifdef STM32F4DISCOVERY 
@@ -46,5 +54,10 @@ void SVC_Handler(void);
 void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+
+// Wiring realization
+
+class LED {
+};
 
 #endif // __SSAU_
