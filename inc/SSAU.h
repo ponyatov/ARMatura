@@ -19,8 +19,12 @@
 // <o> Internal RC generator <8000000UL=> 8 MHz
 #define HSI_VALUE ((uint32_t)8000000UL)
 
-// <s> Clock Source 
-#define CLOCK_SOURCE "HSE_VALUE"
+// <o> Clock Source <0=> External <1=> Internal RC
+#if 0
+#define CLOCK_SOURCE HSE_VALUE
+#else
+#define CLOCK_SOURCE HSI_VALUE
+#endif
 
 // </h>
 
@@ -30,17 +34,6 @@
 #define WIRING 100
 
 // </h>
-
-#include <WConstants.h>
-
-class PIN {
-};
-
-class LED {
-};
-
-//void pinMode(PIN,xIOMODE);
-//void pinMode(LED,xIOMODE);
 
 #ifdef STM32EMU103
 	#ifndef STM32F10X_MD
@@ -81,8 +74,6 @@ class LED {
 	#define STM_LEDon(X)    	STM32vldiscovery_LEDOn(X)
 	#define STM_LEDtoggle(X)	STM32vldiscovery_LEDToggle(X)
 	#define STM_PBget(X)			STM32vldiscovery_PBGetState(X)
-	extern LED LD3,LD4;
-	#define WLED LD3
 #endif // STM32VLDISCOVERY
 
 #ifdef STM32F4DISCOVERY 
@@ -96,15 +87,37 @@ class LED {
 	#define STM_LEDoff(X)   STM_EVAL_LEDOff(X)
 	#define STM_LEDon(X)    STM_EVAL_LEDOn(X)
 	#define STM_PBget(X)		STM_EVAL_PBGetState(X)
-	
-	extern xLED LD3;//,LD4,LD5,LD6;
-	#define WLED LD3
 #endif // STM32F4DISCOVERY
 
 // classical Wiring interface functions for user applet
 void setup(void);
 void loop(void);
 // extra functions for user applet
-void tick(void);	// runs on every systick
+void tick1s(void);	// runs on every second
+
+#include <WConstants.h>
+
+class PIN {
+};
+
+class LED {
+		Led_TypeDef id;
+	public:
+		LED(Led_TypeDef x);
+		void toggle(void);
+		void on(void);
+		void off(void);
+};
+
+#ifdef STM32VLDISCOVERY
+	extern LED LD3,LD4;
+	#define WLED LD3
+	#define XLED LD4
+#endif // STM32VLDISCOVERY
+
+void pinMode(LED,IOMODE);
+void digitalWrite(LED,LEVEL);
+
+void delay(uint16_t ms);
 
 #endif // __SSAU_

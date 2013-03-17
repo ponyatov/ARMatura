@@ -31,12 +31,14 @@
 #error "F_CPU was not defined."
 #endif
 
+//#define LOW      0x0
+//#define HIGH     0x1
+////#define HIGH     0xFF
+enum LEVEL { LOW = 0x0, HIGH = 0x1 };
+
 //#define INPUT    0x0
 //#define OUTPUT   0x1
 ////#define OUTPUT   0xFF
-enum xIOMODE {
-	INPUT=0,
-	OUTPUT=1
-};
+enum IOMODE { INPUT=0x0, OUTPUT=0x1 };
 
 #endif // WCONSTANTS_H
