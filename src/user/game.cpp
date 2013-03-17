@@ -1,10 +1,6 @@
-/*
- * ARMatura book sample
- * https://github.com/ponyatov/ARMatura
-*/
+// ARMatura trahamudra
 
-#include <SSAU.h> // используем Wiring-совместимую 
-                  // объектную библиотеку SSAU ASCL
+#include "ARMatura.h"
 
 void tick1s() {
 	XLED.toggle();

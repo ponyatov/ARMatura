@@ -67,10 +67,13 @@ void SysTick_Handler(void) {
 int main() // classical Wiring main()
 {
 	// board init
-	/* Initialize User_Button on Discovery boards */
+	/* Initialize User_Button */
 	STM_PBinit(BUTTON_USER, BUTTON_MODE_GPIO);
 	
-	/* SysTick end of count event each 1ms */
+	// applet init
+	setup();
+
+	/* start SysTick _after_ applet init */
 	RCC_ClocksTypeDef RCC_Clocks;
 	RCC_GetClocksFreq(&RCC_Clocks);
 	SysTick_Config(RCC_Clocks.HCLK_Frequency/MS_PER_SECOND); // tick every 1 ms
@@ -85,8 +88,6 @@ int main() // classical Wiring main()
 	}
 	*/
 
-	// applet init
-	setup();
 	// applet mainloop
 	for(;;) loop();
 }

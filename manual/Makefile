@@ -8,7 +8,7 @@ TEX = book.tex intro.tex \
 	IDE\ide.tex \
 		IDE\Keil\keil.tex IDE\Keil\0.jpg IDE\Keil\prjconfig\keilconfig.tex \
 		IDE\Eclipse\eclipse.tex IDE\Eclipse\0.jpg \
-	hardware/*.jpg hardware/*.tex hardware\CPU_table.tex \
+	hardware/STM32/*.jpg hardware/*.tex hardware\CPU_table.tex \
 		hardware\PION\pion.tex \
 	QA/*.tex \
 	apps/*.tex apps/*.jpg \
