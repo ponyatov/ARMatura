@@ -166,7 +166,7 @@
             <DriverSelection>4104</DriverSelection>
           </Flash1>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
         </Utilities>
         <TargetArmAds>
@@ -416,6 +416,11 @@
               <FileType>1</FileType>
               <FilePath>..\lib\STM32F10x\src\stm32f10x_rcc.c</FilePath>
             </File>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lib\STM32F10x\src\misc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -455,6 +460,11 @@
               <FileName>SSAU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\..\inc\SSAU.h</FilePath>
+            </File>
+            <File>
+              <FileName>Dbg_RAM.ini</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\..\lib\BSP\STM32VLDISCOVERY\Dbg_RAM.ini</FilePath>
             </File>
           </Files>
         </Group>
