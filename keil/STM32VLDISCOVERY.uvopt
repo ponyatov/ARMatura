@@ -309,7 +309,7 @@
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>16</CurrentLine>
+      <CurrentLine>10</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\..\src\blink\blink.cpp</PathWithFileName>
       <FilenameWithoutPath>blink.cpp</FilenameWithoutPath>
@@ -330,10 +330,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>7</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>46</TopLine>
-      <CurrentLine>47</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>23</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\..\src\SSAU.cpp</PathWithFileName>
       <FilenameWithoutPath>SSAU.cpp</FilenameWithoutPath>
@@ -399,7 +399,7 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\..\lib\BSP\STM32VLDISCOVERY\Dbg_RAM.ini</PathWithFileName>
+      <PathWithFileName>.\Dbg_RAM.ini</PathWithFileName>
       <FilenameWithoutPath>Dbg_RAM.ini</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

@@ -16,9 +16,12 @@ void LED::toggle(void)  { STM_LEDtoggle(id); }
 void LED::on(void) 			{ STM_LEDon(id); }
 void LED::off(void) 		{ STM_LEDoff(id); }
 
-#ifdef STM32VLDISCOVERY
 LED LD3(LED3),LD4(LED4);
+#ifdef STM32VLDISCOVERY
 #endif // STM32VLDISCOVERY
+#ifdef STM32F4DISCOVERY
+LED LD5(LED5),LD6(LED6);
+#endif // STM32F4DISCOVERY
 
 void pinMode(LED l,IOMODE m) {	}
 
@@ -47,12 +50,6 @@ void delay(uint16_t ms) {
 	while (delay_counter);
 }
 
-/*
-uint32_t TICKS_PER_uS=0;
-void delayMicroseconds(uint32_t us) {
-}
-*/
-
 uint16_t SysTick_Handler_1s = MS_PER_SECOND;
 void SysTick_Handler(void) {
 	if (delay_counter) delay_counter--;
@@ -77,7 +74,7 @@ int main() // classical Wiring main()
 	RCC_ClocksTypeDef RCC_Clocks;
 	RCC_GetClocksFreq(&RCC_Clocks);
 	SysTick_Config(RCC_Clocks.HCLK_Frequency/MS_PER_SECOND); // tick every 1 ms
-	
+
 	/*
 	// enable DWT counter for micros()
 	TICKS_PER_uS = RCC_Clocks.SYSCLK_Frequency/uS_PER_SECOND;

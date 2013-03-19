@@ -464,7 +464,7 @@
             <File>
               <FileName>Dbg_RAM.ini</FileName>
               <FileType>5</FileType>
-              <FilePath>.\..\lib\BSP\STM32VLDISCOVERY\Dbg_RAM.ini</FilePath>
+              <FilePath>.\Dbg_RAM.ini</FilePath>
             </File>
           </Files>
         </Group>

@@ -10,30 +10,14 @@
 
 #include <stdint.h>
 
-// <h> Clock
-
 // <o> External Quartz Freq <8000000UL=> 8 MHz <16000000UL=> 16 MHz
 #define HSE_VALUE ((uint32_t)8000000UL)
 #define F_CPU HSE_VALUE
 
-// <o> Internal RC generator <8000000UL=> 8 MHz
-#define HSI_VALUE ((uint32_t)8000000UL)
-
-// <o> Clock Source <0=> External <1=> Internal RC
-#if 0
-#define CLOCK_SOURCE HSE_VALUE
-#else
-#define CLOCK_SOURCE HSI_VALUE
-#endif
-
-// </h>
-
-// <h> Wiring library
+// h> Wiring library
 
 // <o> version <100=> 1.0.0
 #define WIRING 100
-
-// </h>
 
 #ifdef STM32EMU103
 	#ifndef STM32F10X_MD
@@ -82,11 +66,12 @@
 	#endif
 	#include <stm32f4xx.h>
 	#include <stm32f4_discovery.h>
-	#define STM_LEDinit(X)  STM_EVAL_LEDInit(X)
-	#define STM_PBinit(X,Y) STM_EVAL_PBInit(X,Y)
-	#define STM_LEDoff(X)   STM_EVAL_LEDOff(X)
-	#define STM_LEDon(X)    STM_EVAL_LEDOn(X)
-	#define STM_PBget(X)		STM_EVAL_PBGetState(X)
+	#define STM_LEDinit(X)  	STM_EVAL_LEDInit(X)
+	#define STM_PBinit(X,Y) 	STM_EVAL_PBInit(X,Y)
+	#define STM_LEDoff(X)   	STM_EVAL_LEDOff(X)
+	#define STM_LEDon(X)    	STM_EVAL_LEDOn(X)
+	#define STM_LEDtoggle(X)	STM_EVAL_LEDToggle(X)
+	#define STM_PBget(X)			STM_EVAL_PBGetState(X)
 #endif // STM32F4DISCOVERY
 
 // classical Wiring interface functions for user applet
@@ -109,11 +94,14 @@ class LED {
 		void off(void);
 };
 
+extern LED LD3,LD4;
+#define WLED LD3
+#define XLED LD4
 #ifdef STM32VLDISCOVERY
-	extern LED LD3,LD4;
-	#define WLED LD3
-	#define XLED LD4
 #endif // STM32VLDISCOVERY
+#ifdef STM32F4DISCOVERY
+extern LED LD5,LD6;
+#endif // STM32F4DISCOVERY
 
 void pinMode(LED,IOMODE);
 void digitalWrite(LED,LEVEL);
