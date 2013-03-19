@@ -133,7 +133,7 @@
         <tDllPa></tDllPa>
         <tDlgDll></tDlgDll>
         <tDlgPa></tDlgPa>
-        <tIfile>..\lib\BSP\STM32VLDISCOVERY\Dbg_RAM.ini</tIfile>
+        <tIfile>.\Dbg_RAM.ini</tIfile>
         <pMon>STLink\ST-LINKIII-KEIL_SWO.dll</pMon>
       </DebugOpt>
       <TargetDriverDllRegistry>
