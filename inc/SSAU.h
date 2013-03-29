@@ -14,9 +14,7 @@
 #define HSE_VALUE ((uint32_t)8000000UL)
 #define F_CPU HSE_VALUE
 
-// h> Wiring library
-
-// <o> version <100=> 1.0.0
+// <o> Wiring library version <100=> 1.0.0
 #define WIRING 100
 
 #ifdef STM32EMU103
