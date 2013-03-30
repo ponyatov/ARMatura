@@ -16,9 +16,7 @@ bool BUTTON::pressed(void) {
 	return STM_PBget(BUTTON_USER);
 }
 
-#ifdef STM32F4DISCOVERY
-BUTTON B1_User;
-#endif // STM32F4DISCOVERY
+BUTTON btnUSER;
 
 // LED class
 

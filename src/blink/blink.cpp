@@ -18,7 +18,7 @@ void setup() {
 void loop() {
 	digitalWrite(XLED, HIGH);
 	while (1)
-		if (B1_User.pressed())
+		if (btnUSER.pressed())
 			digitalWrite(WLED, HIGH);
 		else
 			digitalWrite(WLED, LOW);

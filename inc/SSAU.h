@@ -88,9 +88,7 @@ public:
 	bool pressed(void);
 };
 
-#ifdef STM32F4DISCOVERY
-extern BUTTON B1_User;
-#endif // STM32F4DISCOVERY
+extern BUTTON btnUSER;
 
 class PIN {
 };
