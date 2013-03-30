@@ -10,8 +10,10 @@
 
 #include <stdint.h>
 
+#ifndef HSE_VALUE
 // <o> External Quartz Freq <8000000UL=> 8 MHz <16000000UL=> 16 MHz
 #define HSE_VALUE ((uint32_t)8000000UL)
+#endif
 #define F_CPU HSE_VALUE
 
 // <o> Wiring library version <100=> 1.0.0

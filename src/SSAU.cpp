@@ -38,12 +38,6 @@ uint32_t millis(void) {
 	return millis_counter;
 }
 
-/*
-uint32_t micros(void) { // have no idea how to make prec timings: DWT is too small
-	return millis()*uS_PER_MS;
-}
-*/
-
 uint32_t volatile delay_counter=0;
 void delay(uint16_t ms) {
 	delay_counter = ms;
@@ -74,16 +68,6 @@ int main() // classical Wiring main()
 	RCC_ClocksTypeDef RCC_Clocks;
 	RCC_GetClocksFreq(&RCC_Clocks);
 	SysTick_Config(RCC_Clocks.HCLK_Frequency/MS_PER_SECOND); // tick every 1 ms
-
-	/*
-	// enable DWT counter for micros()
-	TICKS_PER_uS = RCC_Clocks.SYSCLK_Frequency/uS_PER_SECOND;
-	if (!(CoreDebug->DEMCR & 0x01000000)) {
-		CoreDebug->DEMCR |= 0x01000000;
-		//DWT->CYCCNT = 0; // zero counter
-		DWT->CTRL |= 1 << DWT_CTRL_CYCCNTENA_Pos; // enable counter
-	}
-	*/
 
 	// applet mainloop
 	for(;;) loop();

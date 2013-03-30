@@ -392,14 +392,14 @@
           <GroupName>startup</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32f40xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\lib\STM32F4\startup\keil\startup_stm32f40xx.s</FilePath>
-            </File>
-            <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\lib\STM32F4\src\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f40xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\lib\STM32F4\startup\keil\startup_stm32f40xx.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -620,7 +620,7 @@
             <UseTargetDll>1</UseTargetDll>
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
-            <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
+            <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
             <DriverSelection>4104</DriverSelection>
           </Flash1>
@@ -807,7 +807,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F4DISCOVERY,STM32F40XX,USE_STDPERIPH_DRIVER</Define>
+              <Define>STM32F4DISCOVERY,USE_STDPERIPH_DRIVER,STM32F4XX MANGUSTA_DISCOVERY HSE_VALUE=8000000UL</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F4\inc;..\lib\BSP\STM32F4DISCOVERY</IncludePath>
             </VariousControls>
@@ -823,7 +823,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F4DISCOVERY,STM32F40XX,USE_STDPERIPH_DRIVER</Define>
+              <Define></Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F4\inc;..\lib\BSP\STM32F4DISCOVERY</IncludePath>
             </VariousControls>
@@ -851,14 +851,14 @@
           <GroupName>startup</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32f40xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\..\lib\STM32F4\startup\keil\startup_stm32f40xx.s</FilePath>
-            </File>
-            <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\..\lib\STM32F4\src\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f40xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\lib\STM32F4\startup\keil\startup_stm32f40xx.s</FilePath>
             </File>
           </Files>
         </Group>
