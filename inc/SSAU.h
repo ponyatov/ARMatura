@@ -29,7 +29,7 @@
 	#define STM_PBinit(X,Y) STM32emu103_PBInit(X,Y)
 	#define STM_LEDoff(X)   STM32emu103_LEDOff(X)
 	#define STM_LEDon(X)    STM32emu103_LEDOn(X)
-	#define STM_PBget(X)		STM32emu103_PBGetState(X)
+	#define STM_PBget(X)	STM32emu103_PBGetState(X)
 #endif // STM32EMU103
 
 #ifdef STM32F0DISCOVERY
@@ -42,7 +42,7 @@
 	#define STM_PBinit(X,Y) STM_EVAL_PBInit(X,Y)
 	#define STM_LEDoff(X)   STM_EVAL_LEDOff(X)
 	#define STM_LEDon(X)    STM_EVAL_LEDOn(X)
-	#define STM_PBget(X)		STM_EVAL_PBGetState(X)
+	#define STM_PBget(X)	STM_EVAL_PBGetState(X)
 #endif // STM32F0DISCOVERY
 
 #ifdef STM32VLDISCOVERY
@@ -57,7 +57,7 @@
 	#define STM_LEDoff(X)   	STM32vldiscovery_LEDOff(X)
 	#define STM_LEDon(X)    	STM32vldiscovery_LEDOn(X)
 	#define STM_LEDtoggle(X)	STM32vldiscovery_LEDToggle(X)
-	#define STM_PBget(X)			STM32vldiscovery_PBGetState(X)
+	#define STM_PBget(X)		STM32vldiscovery_PBGetState(X)
 #endif // STM32VLDISCOVERY
 
 #ifdef STM32F4DISCOVERY 
@@ -71,27 +71,37 @@
 	#define STM_LEDoff(X)   	STM_EVAL_LEDOff(X)
 	#define STM_LEDon(X)    	STM_EVAL_LEDOn(X)
 	#define STM_LEDtoggle(X)	STM_EVAL_LEDToggle(X)
-	#define STM_PBget(X)			STM_EVAL_PBGetState(X)
+	#define STM_PBget(X)		STM_EVAL_PBGetState(X)
 #endif // STM32F4DISCOVERY
 
 // classical Wiring interface functions for user applet
 void setup(void);
 void loop(void);
 // extra functions for user applet
-void tick1s(void);	// runs on every second
+void tick1s(void); // runs on every second
 
 #include <WConstants.h>
+
+class BUTTON {
+public:
+	BUTTON();
+	bool pressed(void);
+};
+
+#ifdef STM32F4DISCOVERY
+extern BUTTON B1_User;
+#endif // STM32F4DISCOVERY
 
 class PIN {
 };
 
 class LED {
-		Led_TypeDef id;
-	public:
-		LED(Led_TypeDef x);
-		void toggle(void);
-		void on(void);
-		void off(void);
+	Led_TypeDef id;
+public:
+	LED(Led_TypeDef x);
+	void toggle(void);
+	void on(void);
+	void off(void);
 };
 
 extern LED LD3,LD4;
@@ -100,7 +110,7 @@ extern LED LD3,LD4;
 #ifdef STM32VLDISCOVERY
 #endif // STM32VLDISCOVERY
 #ifdef STM32F4DISCOVERY
-extern LED LD5,LD6;
+	extern LED LD5,LD6;
 #endif // STM32F4DISCOVERY
 
 void pinMode(LED,IOMODE);
