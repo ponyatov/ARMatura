@@ -620,7 +620,7 @@
             <UseTargetDll>1</UseTargetDll>
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
-            <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
+            <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
             <DriverSelection>4104</DriverSelection>
           </Flash1>
@@ -807,7 +807,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F4DISCOVERY,USE_STDPERIPH_DRIVER,STM32F4XX MANGUSTA_DISCOVERY HSE_VALUE=8000000UL</Define>
+              <Define>STM32F4DISCOVERY,USE_STDPERIPH_DRIVER,STM32F4XX,HSE_VALUE=8000000UL</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\lib\CMSIS\inc;..\lib\STM32F4\inc;..\lib\BSP\STM32F4DISCOVERY</IncludePath>
             </VariousControls>

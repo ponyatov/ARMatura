@@ -85,8 +85,7 @@ void SysTick_Handler(void) {
 
 // classical Wiring main() + some hw init
 
-int main()
-{
+int main() {
 	// applet init
 	setup();
 	/* start SysTick _after_ applet init */
