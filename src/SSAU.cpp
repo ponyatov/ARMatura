@@ -16,7 +16,7 @@ bool BUTTON::pressed(void) {
 	return STM_PBget(BUTTON_USER);
 }
 
-BUTTON btnUSER;
+BUTTON UBUTTON;
 
 // LED class
 
@@ -66,12 +66,11 @@ uint32_t millis(void) {
 uint32_t volatile delay_counter = 0;
 void delay(uint16_t ms) {
 	delay_counter = ms;
-	while (delay_counter)
-		;
+	while (delay_counter);
 }
 
 uint16_t SysTick_Handler_1s = MS_PER_SECOND;
-void SysTick_Handler(void) {
+extern "C" void SysTick_Handler(void) {
 	if (delay_counter)
 		delay_counter--;
 	millis_counter++;

@@ -20,6 +20,7 @@ TEX = book.tex intro.tex \
 	debug\debug.tex \
 	firststep\firststep.tex \
 		firststep\blink\blink.tex firststep\blink\blink.cpp \
+		firststep\button\button.tex firststep\button\button.cpp \
 	versioncontrol/vcs.tex \
 		versioncontrol/git.tex \
 		versioncontrol/svn.tex \
@@ -31,7 +32,10 @@ TEX = book.tex intro.tex \
 	Wiring\wiring.tex \
 	Makefile
 	
-firststep\blink\blink.cpp: ..\src\blink\blink.cpp utf2win.py
+firststep\blink\blink.cpp: ..\src\samples\blink.cpp utf2win.py
+	\python\python.exe utf2win.py $< $@	
+	
+firststep\button\button.cpp: ..\src\samples\button.cpp utf2win.py
 	\python\python.exe utf2win.py $< $@	
 	
 book.pdf: $(TEX)

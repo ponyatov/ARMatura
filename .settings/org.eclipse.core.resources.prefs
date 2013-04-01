@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding//inc/SSAU.h=UTF-8
-encoding//src/blink/blink.cpp=UTF-8
+encoding//src/samples/blink.cpp=UTF-8
+encoding//src/samples/button.cpp=UTF-8

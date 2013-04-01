@@ -260,6 +260,16 @@ SRAM контроллера, но на начало SRAM привязан IROM1, а на вторую половину ОЗУ ---
 	caption={[blink.c]/src/blink/blink.cpp}
 ]{firststep/blink/blink.cpp}
 
+\begin{itemize}
+\item \lstinline+WLED+\ --- классический ардуинский светодиод
+\item \lstinline+XLED+\ --- второй светодиод на плате VLD\ref{STM32VLDISCOVERY} 
+\end{itemize}
+
+На платах STM32xxDISCOVERY светодиоды промаркированы LD3, LD4,.. 
+На платах более толстых чипов их стоит до 8 штук (STM32F3DISCOVERY). 
+
+\bigskip
+
 Как видим --- в ней нет абсолютно ничего сложного: только подключение библиотеки
 \wiring, две типовые функции \lstinline+setup()+\ и \lstinline+loop()+,
 и новая функция \lstinline+tick1s()+, срабатывающая каждую секунду от таймера

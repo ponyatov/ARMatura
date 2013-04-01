@@ -88,7 +88,7 @@ public:
 	bool pressed(void);
 };
 
-extern BUTTON btnUSER;
+extern BUTTON UBUTTON;
 
 class PIN {
 };

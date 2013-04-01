@@ -1,0 +1,16 @@
+\chapter{Чтение кнопки: button}\label{button}
+
+\lstinputlisting[
+	label=button.cpp,
+	caption={[button.c]/src/samples/button.cpp}
+]{firststep/button/button.cpp}
+
+При нажатии на кнопку \keys{USER}\ должен зажигаться LD3, параллельно через
+системный таймер мигает LD4 c частотой 0.5 Гц.
+
+Для компиляции проекта нужно выбрать рабочую конфигурацию \keys{VLD button}
+через меню \menu{Project>Manage>Components,..>VLD button>Set as Current Target}.
+
+Keil $\mu$Vision не умеет переключать набор файлов в одном проекте, поэтому
+для корректной компиляции приходится использовать
+\lstinline$#define SAMPLE_xxx$\ в каждом файле примеров.
